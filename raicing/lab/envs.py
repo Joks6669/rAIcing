@@ -270,7 +270,9 @@ class LabSim:
                 lat = float(rng.uniform(-1, 1) * max(hw - 3.5, 0.0))
                 vcap = 0.8 * float(w.vmin_ahead[int(tr.index_at(s))])
                 v = float(rng.uniform(15.0, max(16.0, min(60.0, vcap))))
-                prog = s
+                # the car first completes the lap it is on, then runs ``laps`` full laps, like a car
+                # starting from the grid (progress < 0 before the first line crossing)
+                prog = s - tr.length
             comp = ("wet" if rng.random() < 0.7 else "medium") if wet else str(rng.choice(["soft", "medium", "hard"]))
             w.place_car(i, s, lat, v, float(rng.normal(0, 0.03)), comp, self.regs.race.start_tyre_temp, 0.0,
                         progress=prog)

@@ -228,8 +228,9 @@ et positions marqués, et sur l'accueil un grand bandeau où la dernière course
 Installation en environnement cloud : `download.pytorch.org` est bloqué par le proxy, `pip install`
 récupère donc torch depuis PyPI (version CUDA, lourde mais fonctionnelle).
 
-À examiner : en mode `race`, 75 % des départs sont lancés à un point aléatoire avec `progress = s`, si
-bien que la « course » d'une voiture peut ne durer que quelques décisions (choix de curriculum ou bug ?).
+Corrigé : en mode `race`, les départs lancés (75 %) partaient avec `progress = s` et pouvaient « finir »
+en quelques décisions (bonus d'arrivée gratuit). Ils partent désormais avec `progress = s − L` : la voiture
+termine son tour puis court `laps` tours complets, comme depuis la grille.
 
 Non vérifié par la session principale : relecture de `service.py` (83 Ko) contre la spec.
 
