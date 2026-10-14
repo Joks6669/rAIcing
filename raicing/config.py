@@ -42,7 +42,7 @@ class CarBase:
     yaw_inertia_ratio: float = 1.25  # Iz = ratio * mass (kg m^2 per kg)
     wheelbase: float = 3.4
     cg_to_front: float = 1.75      # distance CG -> front axle (m); rear = wheelbase - this
-    cg_height: float = 0.32
+    cg_height: float = 0.28
     track_width: float = 1.9
     length: float = 5.0
     width: float = 2.0
@@ -52,7 +52,7 @@ class CarBase:
     brake_bias_front: float = 0.58
     cda: float = 1.30              # drag area (m^2)
     cla: float = 3.40              # downforce area (m^2)
-    aero_balance_front: float = 0.43
+    aero_balance_front: float = 0.41
     rolling_resistance: float = 120.0  # N
     max_steer: float = 0.38        # rad at the wheels
     steer_rate: float = 2.8        # rad/s
@@ -62,13 +62,13 @@ class CarBase:
     fz_nominal: float = 3500.0     # N per tyre where load_sensitivity = 0
     pacejka_b: float = 12.0
     pacejka_c: float = 1.55
-    rear_grip_ratio: float = 1.08       # wider rear tyres: more grip ...
+    rear_grip_ratio: float = 1.12       # wider rear tyres: more grip ...
     rear_stiffness_ratio: float = 1.15  # ... and more cornering stiffness -> stable understeer
     tyre_heat_capacity: float = 25_000.0  # J/K per axle
     tyre_heat_gain: float = 0.35         # fraction of sliding power converted to tyre heat
     tyre_cool_base: float = 55.0          # W/K
     tyre_cool_speed: float = 2.5          # W/K per m/s
-    tyre_rolling_heat: float = 18.0        # W per (N of load * m/s) * 1e-3 ; carcass flex heating
+    tyre_rolling_heat: float = 22.0        # W per (N of load * m/s) * 1e-3 ; carcass flex heating
 
 
 @dataclass
@@ -98,8 +98,8 @@ class RaceRules:
     pit_repair_threshold: float = 0.15
     pit_exit_speed: float = 22.0
     pit_ghost_time: float = 2.0
-    pit_tyre_temp: float = 70.0
-    start_tyre_temp: float = 60.0
+    pit_tyre_temp: float = 80.0
+    start_tyre_temp: float = 80.0
     stall_speed: float = 1.0
     stall_time: float = 20.0
     wrong_way_angle: float = 2.1   # rad
@@ -116,7 +116,8 @@ class RaceRules:
     side_contact_lat_margin: float = 1.0  # m/s difference to call it a racing incident
     brake_check_window: float = 1.0
     brake_check_speed_ratio: float = 0.7
-    damage_per_impulse: float = 1.0 / 9000.0  # damage per N*s of impulse
+    damage_per_speed2: float = 1.0 / 250.0   # damage = k * (closing speed - 1.5 m/s)^2
+    penalty_min_closing: float = 3.0          # m/s closing speed for a contact to be penalised
     collision_restitution: float = 0.25
     wall_contact_eliminates: bool = True
 

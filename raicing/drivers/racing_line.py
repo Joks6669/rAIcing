@@ -6,7 +6,7 @@ import numpy as np
 from ..track.geometry import Track
 
 
-def racing_line(track: Track, margin: float = 2.6, iters: int = 600, stencil: int = 6,
+def racing_line(track: Track, margin: float = 3.2, iters: int = 600, stencil: int = 6,
                 alpha: float = 0.25) -> np.ndarray:
     """Return the lateral offset (left positive) of a smooth racing line at each centreline index."""
     n = track.n

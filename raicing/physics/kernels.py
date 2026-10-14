@@ -156,7 +156,7 @@ def aero_factors(S, active, slip_range, slip_cut, dirty_range, dirty_cut, wake_h
 @njit(cache=True)
 def _temp_factor(T, topt, tw):
     z = (T - topt) / tw
-    return _clip(1.0 - 0.35 * z * z, 0.6, 1.0)
+    return _clip(1.0 - 0.25 * z * z, 0.7, 1.0)
 
 
 @njit(cache=True)
@@ -290,19 +290,20 @@ def step_cars(S, PRM, active, flags, dt, t_now, track_temp,
         st[_AYP] = 0.8 * st[_AYP] + 0.2 * (fy / m)
         # ---- tyres
         vxp = vx if vx > 0.0 else 0.0
-        slide_f = abs(fyf) * v * abs(math.sin(af)) + abs(fxf) * vxp * 0.03 + exc_f * vxp * 0.5
-        slide_r = abs(fyr) * v * abs(math.sin(ar)) + abs(fxr) * vxp * 0.03 + exc_r * vxp * 0.5
+        slide_f = abs(fyf) * v * abs(math.sin(af)) + abs(fxf) * vxp * 0.015 + exc_f * vxp * 0.5
+        slide_r = abs(fyr) * v * abs(math.sin(ar)) + abs(fxr) * vxp * 0.015 + exc_r * vxp * 0.5
         st[_SLF] = slide_f
         st[_SLR] = slide_r
         heat_mult = 1.0 + (p[_CDO] - 1.0) * (1.0 - wet)
         cool_k = p[_CB] + p[_CSP] * v
         hf = p[_HGAIN] * slide_f * heat_mult + p[_RH] * 1e-3 * fzf * v - cool_k * (st[_TF] - track_temp)
-        hr = p[_HGAIN] * slide_r * heat_mult + p[_RH] * 1e-3 * fzr * v - cool_k * (st[_TR] - track_temp)
+        # rear tyres are wider: more surface to cool and more rubber to heat
+        hr = p[_HGAIN] * slide_r * heat_mult + p[_RH] * 1e-3 * fzr * v - 1.3 * cool_k * (st[_TR] - track_temp)
         hot = p[_CTOPT] + p[_CTW]
         ovf = 1.0 + _clip((st[_TF] - hot) / 15.0, 0.0, 1.0)
         ovr = 1.0 + _clip((st[_TR] - hot) / 15.0, 0.0, 1.0)
         st[_TF] += hf / p[_HCAP] * dt
-        st[_TR] += hr / p[_HCAP] * dt
+        st[_TR] += hr / (1.15 * p[_HCAP]) * dt
         wk = p[_CWR] * p[_WMULT] * dt * 1e-6
         st[_WF] += wk * slide_f * ovf
         st[_WR] += wk * slide_r * ovr

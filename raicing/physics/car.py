@@ -81,7 +81,7 @@ class CarSpec:
     cool_speed: float
     roll_heat: float
     wear_mult: float
-    rear_grip: float = 1.08
+    rear_grip: float = 1.12
     rear_b: float = 1.15
 
     def to_dict(self) -> dict:

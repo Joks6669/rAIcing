@@ -42,6 +42,7 @@ class Incident:
     kind: str            # "rear" | "side" | "brake_check"
     fault: int | None    # car index or None (racing incident)
     impulse: float
+    closing: float = 0.0     # max closing speed during the contact (m/s)
     penalised: bool = False
 
 
@@ -480,25 +481,28 @@ class World:
                 c, s = np.cos(self.psi[i]), np.sin(self.psi[i])
                 self.vx[i] = max(vw[0] * c + vw[1] * s, 0.0)
                 self.vy[i] = -vw[0] * s + vw[1] * c
-            dmg = j * self.regs.race.damage_per_impulse
+            closing = -vrel
+            dmg = self.regs.race.damage_per_speed2 * max(closing - 1.5, 0.0) ** 2
             self.damage[a] += dmg
             self.damage[b] += dmg
+        closing = max(-vrel, 0.0)
         key = (a, b)
         last = self._contact_last.get(key, -1e9)
         self._contact_last[key] = self.t
         if self.t - last > 0.5:
-            self._new_incident(a, b, j)
+            self._new_incident(a, b, j, closing)
         elif j > 0:
             for inc in reversed(self.incidents):
                 if (inc.a, inc.b) == key:
                     inc.impulse += j
+                    inc.closing = max(inc.closing, closing)
                     self._maybe_penalise(inc)
                     break
         for i in (a, b):
             if self.damage[i] >= 1.0 and self.status[i] == RACING:
                 self._eliminate(i, "broken")
 
-    def _new_incident(self, a: int, b: int, impulse: float) -> None:
+    def _new_incident(self, a: int, b: int, impulse: float, closing: float = 0.0) -> None:
         rr = self.regs.race
         L = self.track.length
         d = (self.s[b] - self.s[a] + 0.5 * L) % L - 0.5 * L   # >0: b ahead of a
@@ -521,7 +525,7 @@ class World:
                 fault = b
             else:
                 fault = None
-        inc = Incident(t=self.t, a=a, b=b, kind=kind, fault=fault, impulse=impulse)
+        inc = Incident(t=self.t, a=a, b=b, kind=kind, fault=fault, impulse=impulse, closing=closing)
         self.incidents.append(inc)
         self.events.append({"t": round(self.t, 3), "type": "contact", "cars": [a, b], "kind": kind,
                             "fault": fault})
@@ -531,7 +535,8 @@ class World:
             self._maybe_penalise(inc)
 
     def _maybe_penalise(self, inc: Incident) -> None:
-        if inc.fault is None or inc.penalised or inc.impulse < 300.0 or self.session.kind != "race":
+        if (inc.fault is None or inc.penalised or self.session.kind != "race"
+                or inc.closing < self.regs.race.penalty_min_closing):
             return
         inc.penalised = True
         self.penalty_time[inc.fault] += self.regs.race.contact_time_penalty
@@ -617,12 +622,12 @@ class World:
         S = self.S
         for i in range(self.n):
             frame.append([
-                round(float(S[i, 0]), 2), round(float(S[i, 1]), 2), round(float(S[i, 2]), 3),
-                round(float(v[i]), 2), int(self.status[i]), int(self.compound[i]),
+                round(float(S[i, 0]), 1), round(float(S[i, 1]), 1), round(float(S[i, 2]), 2),
+                round(float(v[i]), 1), int(self.status[i]), int(self.compound[i]),
                 round(float(max(self.wear_f[i], self.wear_r[i])), 3),
-                round(float(0.5 * (self.temp_f[i] + self.temp_r[i])), 1),
+                round(float(0.5 * (self.temp_f[i] + self.temp_r[i]))),
                 int(np.floor(self.progress[i] / L)), int(self.position[i]),
-                round(float(self.damage[i]), 3), round(float(self.steer[i]), 3), round(float(self.pedal[i]), 2),
+                round(float(self.damage[i]), 2), round(float(self.steer[i]), 2), round(float(self.pedal[i]), 2),
             ])
         self.frames.append(frame)
         if self.steps % (self.session.record_every * 10) == 0:
