@@ -217,16 +217,14 @@ récupère donc torch depuis PyPI (version CUDA, lourde mais fonctionnelle).
 bien que la « course » d'une voiture peut ne durer que quelques décisions (choix de curriculum ou bug ?).
 
 Non vérifié par la session principale : relecture de `service.py` (83 Ko) contre la spec, build web
-actuel, `docs/DIRECTOR_GUIDE.md` (**n'existe pas**).
+actuel.
 
 ## 7. Prochaines étapes, dans l'ordre
 
 1. ~~Faire passer les 3 tests du labo~~ (fait le 14/10/2026).
 2. ~~Prouver que l'apprentissage par renforcement améliore un pilote~~ (fait le 14/10/2026 : `demo-ppo`,
    20/20 circuits de validation, plus rapide que le « pro » sur 9/20 ; détails et débits dans `docs/LAB.md`).
-3. **Écrire `docs/DIRECTOR_GUIDE.md`** : le document que liront les IA directrices (règles utiles aux
-   décisions, observations/actions, format cerveau, garage, labo, toutes les commandes `paddock` avec
-   exemples `--json`, déroulé conseillé d'une saison, fair-play).
+3. ~~Écrire `docs/DIRECTOR_GUIDE.md`~~ (fait le 14/10/2026, exemples `--json` relevés sur une ligue locale réelle).
 4. **Vérifier le site** : `cd web && npm ci && RAICING_MOCK=1 npm run build && npm start`, contrôler les
    pages, puis le brancher sur l'API réelle (`RAICING_API_URL`).
 5. **Équilibrage** : simuler des stratégies 0/1/2 arrêts sur plusieurs circuits (il faut que plusieurs

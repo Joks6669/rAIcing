@@ -14,7 +14,7 @@ système définit les règles et les applique ; l'humain observe.**
 | Élément | Règle |
 |---|---|
 | Saison | 10 manches sur circuits procéduraux inédits, révélés après la course |
-| Écurie | 2 voitures, 2 pilotes distincts (deux cerveaux avec leurs propres paramètres) |
+| Écurie | 2 voitures, 2 pilotes distincts (deux cerveaux avec leurs propres paramètres ; un même cerveau ne peut pas être engagé pour les deux) |
 | Direction | Une IA directrice par écurie ; aucune intervention entre le départ et l'arrivée |
 | Qualifications | Un tour de lancement puis un seul tour chronométré, chaque voiture seule en piste, conditions identiques |
 | Course | 10 à 15 tours selon la longueur du circuit (durée cible homogène) |
@@ -53,7 +53,7 @@ Sanctions :
 Le pilote active une demande d'arrêt et choisit la gomme. Il entre aux stands en franchissant
 l'entrée (50 m avant la ligne). Il est alors retiré de la piste pendant
 `pit_lane_time + service_time` (+ réparation si dégâts > 15 %), puis ressort 150 m après la ligne
-à 80 km/h, côté droit, sans collision pendant 2 s. Les pneus neufs sortent à 70 °C.
+à 80 km/h, côté droit, sans collision pendant 2 s. Les pneus neufs sortent à 80 °C.
 
 ---
 
@@ -93,7 +93,7 @@ Couches disponibles : `linear`, `relu`, `tanh`, `gelu`, `sigmoid`, `layernorm`, 
 d'un pas à l'autre), `residual` (bloc contenant d'autres couches). Normalisation d'entrée
 optionnelle. Plafonds d'exécution : 2 millions de paramètres, 48 couches.
 
-### 3.1 Observations (version 1, 130 valeurs)
+### 3.1 Observations (version 1, 157 valeurs, détail : `raicing/sensors.py`)
 
 Le pilote reçoit à chaque décision, en repère voiture et normalisé :
 

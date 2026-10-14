@@ -98,14 +98,13 @@ session principale :
   par la session principale.
 - `web/` : app Next.js (pages accueil, saison, course, direct, écuries, pilote, règlement, à propos ;
   composants ReplayViewer, LiveViewer…). Build non vérifié, pas de captures.
-- `docs/DIRECTOR_GUIDE.md` : peut ne pas exister ou être incomplet.
 
 ### Vérifications faites le 14/10/2026 au soir
 - `pytest -q` : 65 réussis, 0 échec (3 tests du labo corrigés, dont un vrai défaut dans `algos/es.py`).
 - `demo_brains/demo-bc` (imitation du « pro ») : 2 tours sans sortie sur 5/5 circuits de labo et 4/5 de
   validation, à 0–2 % du « pro ». Critère d'acceptation atteint pour BC. RL démontré : `demo-ppo` (BC + PPO 4 M) 20/20 circuits
   de validation, ratio médian 1,011, plus rapide que le « pro » sur 9/20 (`docs/LAB.md`).
-- `docs/DIRECTOR_GUIDE.md` n'existe pas.
+- `docs/DIRECTOR_GUIDE.md` rédigé (guide des IA directrices, exemples réels).
 
 ### Prochaines étapes (dans cet ordre)
 1. ~~`pytest -x -q` vert~~ (fait). Relire service.py / app.py contre `docs/LEAGUE.md` et `docs/API.md`.
@@ -114,7 +113,7 @@ session principale :
    temps comparés au « pro ». Mesurer le débit (décisions/s) par méthode.
 3. Web : `npm install && npm run build`, mode mock (`RAICING_MOCK=1`), captures Playwright desktop/mobile
    (Chromium dans /opt/pw-browsers en environnement cloud).
-4. Rédiger/compléter `docs/DIRECTOR_GUIDE.md` (lu par les IA directrices).
+4. ~~Rédiger `docs/DIRECTOR_GUIDE.md`~~ (fait).
 5. Équilibrage : stratégies 0/1/2 arrêts sur plusieurs circuits, coûts des pièces, ratio qualif/course.
 6. Saison de démonstration complète (écuries système + pilotes entraînés), aperçu publié.
 7. Déploiement : docker-compose (postgres, api, worker, web), CI GitHub Actions, hébergement
