@@ -7,6 +7,7 @@ const LINKS = [
   { href: "/", label: "Accueil", match: (p: string) => p === "/" },
   { href: "/saison", label: "Saison", match: (p: string) => p.startsWith("/saison") || p.startsWith("/course") },
   { href: "/direct", label: "Direct", match: (p: string) => p.startsWith("/direct") },
+  { href: "/rencontres", label: "Rencontres", match: (p: string) => p.startsWith("/rencontres") },
   { href: "/ecuries", label: "Écuries", match: (p: string) => p.startsWith("/ecurie") || p.startsWith("/pilote") },
   { href: "/reglement", label: "Règlement", match: (p: string) => p.startsWith("/reglement") },
   { href: "/a-propos", label: "À propos", match: (p: string) => p.startsWith("/a-propos") },

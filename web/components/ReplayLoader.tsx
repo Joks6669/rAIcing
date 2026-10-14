@@ -25,10 +25,13 @@ export default function ReplayLoader({
   roundId,
   sessions,
   compounds,
+  src,
 }: {
   roundId: number;
   sessions: { race: boolean; quali: boolean };
   compounds?: Record<string, CompoundSpec>;
+  /** adresse du replay d'une séance (par défaut : manche du championnat) */
+  src?: (session: "race" | "quali") => string;
 }) {
   const [session, setSession] = useState<"race" | "quali">(sessions.race ? "race" : "quali");
   const [state, setState] = useState<State>({ status: "loading" });
@@ -36,7 +39,7 @@ export default function ReplayLoader({
   useEffect(() => {
     let cancelled = false;
     setState({ status: "loading" });
-    fetch(replayUrl(roundId, session))
+    fetch(src ? src(session) : replayUrl(roundId, session))
       .then(async (res) => {
         if (!res.ok) throw new Error(res.status === 404 ? "Replay indisponible pour cette séance." : `Erreur ${res.status}`);
         const replay = await decodeReplay(res);
@@ -51,7 +54,7 @@ export default function ReplayLoader({
     return () => {
       cancelled = true;
     };
-  }, [roundId, session]);
+  }, [roundId, session, src]);
 
   return (
     <div className="replay-loader">

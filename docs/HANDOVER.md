@@ -215,6 +215,16 @@ Condensed italique (auto-hébergée, `web/app/fonts/`, licence OFL), cartes à l
 et positions marqués, et sur l'accueil un grand bandeau où la dernière course tourne en fond
 (`web/components/HeroReplay.tsx`, image fixe si l'utilisateur réduit les animations).
 
+### 5.8 Rencontres : modèles entraînés ailleurs (décision de Gabriel, 14/10/2026)
+Gabriel a changé de cap : **l'entraînement se fait ailleurs**, et il veut une interface où l'on dépose
+les fichiers de modèles entraînés pour les faire courir. C'est la page **Rencontres** du site
+(`web/app/rencontres/`, `web/components/matches/`), adossée à `raicing/matches.py` (stockage dans
+`<data>/matches/<id>/`, exécution une par une dans un fil de fond) et aux routes `/api/matches` de l'API.
+Format déposé : zip `brain.json` + `weights.npz`, validé au dépôt. `scripts/convert_model.py` convertit un
+modèle stable-baselines3 (PPO/SAC/TD3, avec VecNormalize) ou un `nn.Sequential` PyTorch.
+`scripts/rencontres.py` lance API + site en local (Windows compris). Guide : `docs/RENCONTRES.md`.
+Tests : `tests/test_matches.py`. Le championnat reste en place mais n'est plus la priorité.
+
 ## 6. État des tests (mis à jour le 14/10/2026)
 
 `python -m pytest -q` : **65 réussis, 0 échec** (≈ 35 s). Les 3 échecs précédents de `tests/test_lab.py` :
@@ -249,8 +259,7 @@ Non vérifié par la session principale : relecture de `service.py` (83 Ko) cont
    refroidissement corrigé (élargit la fenêtre de température au lieu de surrefroidir) ; sorties en peloton
    des pilotes de référence réduites ; coéquipiers système départagés. Freins transformés en
    anti-blocage et attrition (~30 %) acceptée, sur décision de Gabriel.
-6. **Saison de démonstration** : ligue locale (`stewards init`), écuries système + 1–2 écuries avec des
-   cerveaux entraînés, 10 manches, puis publication d'un aperçu.
+6. ~~Saison de démonstration~~ : remplacée par les Rencontres (§ 5.8), l'entraînement se faisant ailleurs.
 7. **Déploiement** : `docker-compose` (postgres, api, worker, web), CI GitHub Actions (pytest + build web).
    Le site peut aller sur Vercel (connecté) ; l'API et le worker (Python, CPU, long) ont besoin d'un
    serveur à part (VPS, Railway, Fly…) — c'est une décision de coût à soumettre à Gabriel.

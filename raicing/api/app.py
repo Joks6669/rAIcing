@@ -28,6 +28,7 @@ from ..league.db import Database
 from ..league.live import STALE_AFTER, FeedTail, broadcast_time, is_live, live_status, message_time, read_state
 from ..league.service import LeagueError, LeagueService
 from ..league.util import parse_iso
+from ..matches import MatchError, MatchRunner, MatchStore
 from .settings import ApiSettings
 
 # ---------------------------------------------------------------------- request bodies
@@ -88,6 +89,23 @@ class ScheduleBody(BaseModel):
     every_hours: float = 168.0
 
 
+class MatchEntrantBody(BaseModel):
+    name: str = ""
+    color: str | None = None
+    start: str = "auto"
+    package: str | None = Field(default=None, description="modèle (zip brain.json + weights.npz) en base64")
+    reference: str | None = Field(default=None, description="pilote de référence si pas de modèle")
+
+
+class MatchBody(BaseModel):
+    name: str = ""
+    entrants: list[MatchEntrantBody]
+    track_seed: int | str | None = None
+    laps: int | None = None
+    weather: str = "dry"
+    fill: int = 0
+
+
 # ---------------------------------------------------------------------- helpers
 
 
@@ -115,6 +133,14 @@ def create_app(settings: ApiSettings | None = None) -> FastAPI:
     @app.exception_handler(LeagueError)
     async def _league_error(_request: Request, exc: LeagueError) -> JSONResponse:
         return JSONResponse({"detail": exc.message}, status_code=exc.status)
+
+    @app.exception_handler(MatchError)
+    async def _match_error(_request: Request, exc: MatchError) -> JSONResponse:
+        return JSONResponse({"detail": exc.message}, status_code=exc.status)
+
+    matches = MatchStore(settings.data_dir)
+    runner = MatchRunner(matches)
+    app.state.matches = matches
 
     # ------------------------------------------------------------------ dependencies
     def service() -> Iterator[LeagueService]:
@@ -167,6 +193,37 @@ def create_app(settings: ApiSettings | None = None) -> FastAPI:
         if "gzip" in request.headers.get("accept-encoding", "").lower():
             return FileResponse(path, media_type="application/json", headers={**headers, "Content-Encoding": "gzip"})
         return Response(gzip.decompress(path.read_bytes()), media_type="application/json", headers=headers)
+
+    # ------------------------------------------------------------------ exhibition races
+    @app.post("/api/matches", status_code=201)
+    def match_create(body: MatchBody) -> dict[str, Any]:
+        packages: list[bytes | None] = []
+        for k, e in enumerate(body.entrants):
+            if e.package:
+                try:
+                    packages.append(base64.b64decode(e.package, validate=True))
+                except (binascii.Error, ValueError) as exc:
+                    raise MatchError(f"{e.name or f'participant {k + 1}'} : fichier mal transmis ({exc})") from exc
+            else:
+                packages.append(None)
+        meta = matches.create(body.model_dump(exclude={"entrants": {"__all__": {"package"}}}), packages)
+        runner.submit(meta["id"])
+        return meta
+
+    @app.get("/api/matches")
+    def match_list() -> list[dict[str, Any]]:
+        return matches.list()
+
+    @app.get("/api/matches/{match_id}")
+    def match_detail(match_id: str) -> dict[str, Any]:
+        return matches.read(match_id)
+
+    @app.get("/api/matches/{match_id}/replay")
+    def match_replay(match_id: str, request: Request, session: str = Query("race")) -> Response:
+        path = matches.replay_path(match_id, session)
+        if "gzip" in request.headers.get("accept-encoding", "").lower():
+            return FileResponse(path, media_type="application/json", headers={"Content-Encoding": "gzip"})
+        return Response(gzip.decompress(path.read_bytes()), media_type="application/json")
 
     @app.get("/api/teams")
     def teams(svc: LeagueService = Depends(service)) -> list[dict[str, Any]]:
