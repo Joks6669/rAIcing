@@ -83,6 +83,7 @@ class CarSpec:
     wear_mult: float
     rear_grip: float = 1.12
     rear_b: float = 1.15
+    tyre_window: float = 1.0   # multiplier of every compound's optimal temperature window width
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -124,10 +125,13 @@ def build_spec(regs: Regulations | None = None, mods: PerformanceModifiers | Non
         pac_c=b.pacejka_c,
         heat_cap=b.tyre_heat_capacity,
         heat_gain=b.tyre_heat_gain,
-        cool_base=b.tyre_cool_base * mods.cooling,
-        cool_speed=b.tyre_cool_speed * mods.cooling,
+        cool_base=b.tyre_cool_base,
+        cool_speed=b.tyre_cool_speed,
         roll_heat=b.tyre_rolling_heat,
         wear_mult=mods.wear,
         rear_grip=b.rear_grip_ratio,
         rear_b=b.rear_stiffness_ratio,
+        # the cooling part keeps the tyres in their window (wider window, hot or cold): cooling them
+        # harder would push them below their window in normal conditions and only cost grip
+        tyre_window=mods.cooling,
     )

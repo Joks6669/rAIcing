@@ -113,7 +113,7 @@ session principale :
    temps comparés au « pro ». Mesurer le débit (décisions/s) par méthode.
 3. ~~Web : build, mode mock, branchement API réelle, captures desktop/mobile~~ (fait).
 4. ~~Rédiger `docs/DIRECTOR_GUIDE.md`~~ (fait).
-5. Équilibrage : stratégies 0/1/2 arrêts sur plusieurs circuits, coûts des pièces, ratio qualif/course.
+5. ~~Équilibrage~~ (fait, `docs/BALANCE.md` ; à trancher par Gabriel : pièce « freins », attrition).
 6. Saison de démonstration complète (écuries système + pilotes entraînés), aperçu publié.
 7. Déploiement : docker-compose (postgres, api, worker, web), CI GitHub Actions, hébergement
    (Gabriel a connecté Vercel pour le site ; l'API + worker nécessitent un serveur à part).

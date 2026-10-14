@@ -137,6 +137,7 @@ class World:
                 self.PRM[i, K.PC[f]] = getattr(sp, f)
             self.PRM[i, K.PC["wheelbase"]] = sp.lf + sp.lr
         self.p = {name: self.PRM[:, col] for name, col in K.PC.items()}
+        self._tyre_window = np.array([getattr(sp, "tyre_window", 1.0) for sp in specs], dtype=np.float64)
         self.S[:, K.SC["drag_mult"]] = 1.0
         self.S[:, K.SC["df_mult"]] = 1.0
         self.temp_f = rr.start_tyre_temp
@@ -206,6 +207,7 @@ class World:
     def _refresh_compounds(self) -> None:
         for k, tab in self._ctab.items():
             self.PRM[:, K.PC["c_" + k]] = tab[self.compound]
+        self.PRM[:, K.PC["c_t_width"]] *= self._tyre_window
 
     def project(self, xy: np.ndarray, hint: np.ndarray, back: int = 6, fwd: int = 8):
         pts, su, sl, sn, cs, hw, _, n, _ = self._trk

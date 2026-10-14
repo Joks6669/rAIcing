@@ -112,7 +112,7 @@ Au plus 20 % du budget non dépensé est reporté. `paddock garage catalog` donn
 | `bodywork` | traînée | 55 |
 | `chassis` | masse et capacité d'intégration | 60 |
 | `brakes` | force de freinage | 40 |
-| `cooling` | capacité thermique, refroidissement des pneus | 45 |
+| `cooling` | capacité thermique, fenêtre de température des pneus plus large | 45 |
 | `suspension` | adhérence mécanique et usure | 50 |
 
 - Niveaux 0 à 10, **coût ×1,35 par niveau**, **rendements décroissants** (le catalogue indique

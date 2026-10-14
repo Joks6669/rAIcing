@@ -98,7 +98,8 @@ class ReferenceDriver:
             f = (mu_eff - self.mu_grid[j]) / (self.mu_grid[j + 1] - self.mu_grid[j])
             ahead = max(int((v * 0.5 + 6.0) / tr.ds), 2)
             ids = (idx + np.arange(ahead)) % tr.n
-            v_target = float(((1 - f) * grid[j, ids] + f * grid[j + 1, ids]).min())
+            prof_ids = (1 - f) * grid[j, ids] + f * grid[j + 1, ids]
+            v_target = float(prof_ids.min())
             # ---- traffic: lateral corridor and speed limits from the surrounding cars
             lim = float(tr.half_width[idx]) - 2.9
             lo, hi = -lim, lim
@@ -126,7 +127,12 @@ class ReferenceDriver:
                     room_right = tr.half_width[int(w.idx[j])] + lj
                     if p.aggression > 0.25 and closing > 0.5 and max(room_left, room_right) > 6.5 and d < 40.0:
                         side = 1.0 if room_left > room_right else -1.0
-                        desired = lj + side * 4.4
+                        # at speed the car overshoots its lateral target: keep a wider wall margin for
+                        # a passing move, and give up if that leaves no room beside the other car
+                        lim_pass = lim - 0.03 * max(v - 30.0, 0.0)
+                        lane = float(np.clip(lj + side * 4.4, -lim_pass, lim_pass))
+                        if abs(lane - lj) >= 3.2:
+                            desired = lane
                     d_safe = 6.0 + 0.25 * v
                     # time-to-collision based following speed
                     v_follow = vj + 0.5 * (d - d_safe)
@@ -148,6 +154,11 @@ class ReferenceDriver:
             off = prev_off + float(np.clip(off - prev_off, -0.12, 0.12))
             self.lat_target[k] = off
             lat_t = float(np.clip(float(self.line[idx]) + off, -lim, lim))
+            # off the racing line (traffic), the path through a corner is tighter on the inside:
+            # curvature k / (1 - k * offset), so the corner speed scales with sqrt(1 - k * offset)
+            if abs(off) > 0.3:
+                tight = np.clip(1.0 - self.line_k[ids] * off, 0.3, 1.0)
+                v_target = min(v_target, float((prof_ids * np.sqrt(tight)).min()))
             # ---- steering: feed-forward curvature + Stanley correction on the racing line
             look = (idx + max(int(v * 0.12 / tr.ds), 1)) % tr.n
             e_lat = float(w.lat[i]) - lat_t

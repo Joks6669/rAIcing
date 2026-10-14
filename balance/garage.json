@@ -1,0 +1,1367 @@
+{
+ "base": {
+  "0": 80.93153027043554,
+  "1": 84.54583888913069,
+  "2": 74.66481123907673,
+  "3": 66.83398239208942
+ },
+ "table": [
+  {
+   "part": "engine",
+   "level": 1,
+   "cost": 70.0,
+   "gain_pct": 0.7435037257680492,
+   "per100": 1.0621481796686418
+  },
+  {
+   "part": "engine",
+   "level": 2,
+   "cost": 164.5,
+   "gain_pct": 1.2449861801203985,
+   "per100": 0.756830504632461
+  },
+  {
+   "part": "engine",
+   "level": 3,
+   "cost": 292.1,
+   "gain_pct": 1.5554406240818308,
+   "per100": 0.5325027812673163
+  },
+  {
+   "part": "engine",
+   "level": 5,
+   "cost": 696.8,
+   "gain_pct": 1.8962127433956404,
+   "per100": 0.2721315647812343
+  },
+  {
+   "part": "engine",
+   "level": 7,
+   "cost": 1434.3999999999999,
+   "gain_pct": 2.0424190260462747,
+   "per100": 0.14238838720344915
+  },
+  {
+   "part": "aero",
+   "level": 1,
+   "cost": 65.0,
+   "gain_pct": 0.6201265594638232,
+   "per100": 0.9540408607135741
+  },
+  {
+   "part": "aero",
+   "level": 2,
+   "cost": 152.8,
+   "gain_pct": 1.0174112146417553,
+   "per100": 0.665845035760311
+  },
+  {
+   "part": "aero",
+   "level": 3,
+   "cost": 271.3,
+   "gain_pct": 1.2718146556095742,
+   "per100": 0.46878535039055447
+  },
+  {
+   "part": "aero",
+   "level": 5,
+   "cost": 647.1,
+   "gain_pct": 1.5974589733345599,
+   "per100": 0.2468643136044753
+  },
+  {
+   "part": "aero",
+   "level": 7,
+   "cost": 1332.1,
+   "gain_pct": 1.7385383941959809,
+   "per100": 0.13051110233435786
+  },
+  {
+   "part": "bodywork",
+   "level": 1,
+   "cost": 55.0,
+   "gain_pct": 0.42241755567795625,
+   "per100": 0.7680319194144659
+  },
+  {
+   "part": "bodywork",
+   "level": 2,
+   "cost": 129.2,
+   "gain_pct": 0.7432555672614931,
+   "per100": 0.5752752068587408
+  },
+  {
+   "part": "bodywork",
+   "level": 3,
+   "cost": 229.4,
+   "gain_pct": 0.9718364014266802,
+   "per100": 0.42364272076141246
+  },
+  {
+   "part": "bodywork",
+   "level": 5,
+   "cost": 547.4,
+   "gain_pct": 1.2727279173987538,
+   "per100": 0.23250418659093056
+  },
+  {
+   "part": "bodywork",
+   "level": 7,
+   "cost": 1126.9,
+   "gain_pct": 1.4239476453323046,
+   "per100": 0.12635971650832412
+  },
+  {
+   "part": "chassis",
+   "level": 1,
+   "cost": 60.0,
+   "gain_pct": 0.11914912232123698,
+   "per100": 0.19858187053539497
+  },
+  {
+   "part": "chassis",
+   "level": 2,
+   "cost": 141.0,
+   "gain_pct": 0.22448547746217978,
+   "per100": 0.15920955848381543
+  },
+  {
+   "part": "chassis",
+   "level": 3,
+   "cost": 250.4,
+   "gain_pct": 0.28972618551896206,
+   "per100": 0.11570534565453756
+  },
+  {
+   "part": "chassis",
+   "level": 5,
+   "cost": 597.3,
+   "gain_pct": 0.3687453270428821,
+   "per100": 0.061735363643542956
+  },
+  {
+   "part": "chassis",
+   "level": 7,
+   "cost": 1229.5,
+   "gain_pct": 0.4243246819684589,
+   "per100": 0.03451197087990719
+  },
+  {
+   "part": "brakes",
+   "level": 1,
+   "cost": 40.0,
+   "gain_pct": -0.014096755553479692,
+   "per100": -0.03524188888369923
+  },
+  {
+   "part": "brakes",
+   "level": 2,
+   "cost": 94.0,
+   "gain_pct": -0.045879537267264056,
+   "per100": -0.04880801836942985
+  },
+  {
+   "part": "brakes",
+   "level": 3,
+   "cost": 166.9,
+   "gain_pct": -0.06478943241602973,
+   "per100": -0.0388193124122407
+  },
+  {
+   "part": "brakes",
+   "level": 5,
+   "cost": 398.20000000000005,
+   "gain_pct": -0.09799401080099834,
+   "per100": -0.024609244299597773
+  },
+  {
+   "part": "brakes",
+   "level": 7,
+   "cost": 819.7,
+   "gain_pct": -0.12586482218180586,
+   "per100": -0.01535498623664827
+  },
+  {
+   "part": "cooling",
+   "level": 1,
+   "cost": 45.0,
+   "gain_pct": -0.12642351475896835,
+   "per100": -0.2809411439088185
+  },
+  {
+   "part": "cooling",
+   "level": 2,
+   "cost": 105.8,
+   "gain_pct": -0.2557724882386459,
+   "per100": -0.24175093406299236
+  },
+  {
+   "part": "cooling",
+   "level": 3,
+   "cost": 187.8,
+   "gain_pct": -0.36694532184764456,
+   "per100": -0.19539154517978943
+  },
+  {
+   "part": "cooling",
+   "level": 5,
+   "cost": 448.0,
+   "gain_pct": -0.5403726791898802,
+   "per100": -0.12061890160488396
+  },
+  {
+   "part": "cooling",
+   "level": 7,
+   "cost": 922.2,
+   "gain_pct": -0.6627387798450048,
+   "per100": -0.07186497287410591
+  },
+  {
+   "part": "suspension",
+   "level": 1,
+   "cost": 50.0,
+   "gain_pct": 0.4836823088000344,
+   "per100": 0.9673646176000688
+  },
+  {
+   "part": "suspension",
+   "level": 2,
+   "cost": 117.5,
+   "gain_pct": 0.8050178178724118,
+   "per100": 0.6851215471254568
+  },
+  {
+   "part": "suspension",
+   "level": 3,
+   "cost": 208.6,
+   "gain_pct": 1.0466889418327894,
+   "per100": 0.5017684284912701
+  },
+  {
+   "part": "suspension",
+   "level": 5,
+   "cost": 497.7,
+   "gain_pct": 1.3569806129657596,
+   "per100": 0.27265031403772544
+  },
+  {
+   "part": "suspension",
+   "level": 7,
+   "cost": 1024.6,
+   "gain_pct": 1.495467432511191,
+   "per100": 0.145956220233378
+  },
+  {
+   "tech": "energy_recovery",
+   "cost": 150,
+   "gain_pct": 0.5032641870165443,
+   "per100": 0.3355094580110295
+  },
+  {
+   "tech": "low_drag",
+   "cost": 100,
+   "gain_pct": 0.2758014745089795,
+   "per100": 0.2758014745089795
+  },
+  {
+   "tech": "tyre_telemetry",
+   "cost": 80,
+   "gain_pct": 0.014637973233459693,
+   "per100": 0.018297466541824618
+  }
+ ],
+ "rows": [
+  {
+   "track": 0,
+   "part": null,
+   "level": 0,
+   "tech": null,
+   "best": 80.93153027043554
+  },
+  {
+   "track": 1,
+   "part": null,
+   "level": 0,
+   "tech": null,
+   "best": 84.54583888913069
+  },
+  {
+   "track": 2,
+   "part": null,
+   "level": 0,
+   "tech": null,
+   "best": 74.66481123907673
+  },
+  {
+   "track": 3,
+   "part": null,
+   "level": 0,
+   "tech": null,
+   "best": 66.83398239208942
+  },
+  {
+   "track": 0,
+   "part": "engine",
+   "level": 1,
+   "tech": null,
+   "best": 80.41574661770477
+  },
+  {
+   "track": 0,
+   "part": "engine",
+   "level": 2,
+   "tech": null,
+   "best": 80.06330926759402
+  },
+  {
+   "track": 0,
+   "part": "engine",
+   "level": 3,
+   "tech": null,
+   "best": 79.85469798827775
+  },
+  {
+   "track": 0,
+   "part": "engine",
+   "level": 5,
+   "tech": null,
+   "best": 79.6272720285257
+  },
+  {
+   "track": 0,
+   "part": "engine",
+   "level": 7,
+   "tech": null,
+   "best": 79.5319518472818
+  },
+  {
+   "track": 0,
+   "part": "aero",
+   "level": 1,
+   "tech": null,
+   "best": 80.19283055612622
+  },
+  {
+   "track": 0,
+   "part": "aero",
+   "level": 2,
+   "tech": null,
+   "best": 79.67701649586616
+  },
+  {
+   "track": 0,
+   "part": "aero",
+   "level": 3,
+   "tech": null,
+   "best": 79.35467689321464
+  },
+  {
+   "track": 0,
+   "part": "aero",
+   "level": 5,
+   "tech": null,
+   "best": 78.94577444075694
+  },
+  {
+   "track": 0,
+   "part": "aero",
+   "level": 7,
+   "tech": null,
+   "best": 78.76762891425759
+  },
+  {
+   "track": 0,
+   "part": "bodywork",
+   "level": 1,
+   "tech": null,
+   "best": 80.68079425338546
+  },
+  {
+   "track": 0,
+   "part": "bodywork",
+   "level": 2,
+   "tech": null,
+   "best": 80.48591022716757
+  },
+  {
+   "track": 0,
+   "part": "bodywork",
+   "level": 3,
+   "tech": null,
+   "best": 80.3444168156954
+  },
+  {
+   "track": 0,
+   "part": "bodywork",
+   "level": 5,
+   "tech": null,
+   "best": 80.16622396907435
+  },
+  {
+   "track": 0,
+   "part": "bodywork",
+   "level": 7,
+   "tech": null,
+   "best": 80.07727113767959
+  },
+  {
+   "track": 0,
+   "part": "chassis",
+   "level": 1,
+   "tech": null,
+   "best": 80.78085143903003
+  },
+  {
+   "track": 0,
+   "part": "chassis",
+   "level": 2,
+   "tech": null,
+   "best": 80.66439970340636
+  },
+  {
+   "track": 0,
+   "part": "chassis",
+   "level": 3,
+   "tech": null,
+   "best": 80.59669807572637
+  },
+  {
+   "track": 0,
+   "part": "chassis",
+   "level": 5,
+   "tech": null,
+   "best": 80.47745353243535
+  },
+  {
+   "track": 0,
+   "part": "chassis",
+   "level": 7,
+   "tech": null,
+   "best": 80.40157364202715
+  },
+  {
+   "track": 0,
+   "part": "brakes",
+   "level": 1,
+   "tech": null,
+   "best": 80.95430260460186
+  },
+  {
+   "track": 0,
+   "part": "brakes",
+   "level": 2,
+   "tech": null,
+   "best": 80.98603090715622
+  },
+  {
+   "track": 0,
+   "part": "brakes",
+   "level": 3,
+   "tech": null,
+   "best": 81.0032402109844
+  },
+  {
+   "track": 0,
+   "part": "brakes",
+   "level": 5,
+   "tech": null,
+   "best": 81.03673870561039
+  },
+  {
+   "track": 0,
+   "part": "brakes",
+   "level": 7,
+   "tech": null,
+   "best": 81.07901031502728
+  },
+  {
+   "track": 0,
+   "part": "cooling",
+   "level": 1,
+   "tech": null,
+   "best": 81.08895559001502
+  },
+  {
+   "track": 0,
+   "part": "cooling",
+   "level": 2,
+   "tech": null,
+   "best": 81.27421636096236
+  },
+  {
+   "track": 0,
+   "part": "cooling",
+   "level": 3,
+   "tech": null,
+   "best": 81.41741740092154
+  },
+  {
+   "track": 0,
+   "part": "cooling",
+   "level": 5,
+   "tech": null,
+   "best": 81.65817248280632
+  },
+  {
+   "track": 0,
+   "part": "cooling",
+   "level": 7,
+   "tech": null,
+   "best": 81.8142987764399
+  },
+  {
+   "track": 0,
+   "part": "suspension",
+   "level": 1,
+   "tech": null,
+   "best": 80.46698020824003
+  },
+  {
+   "track": 0,
+   "part": "suspension",
+   "level": 2,
+   "tech": null,
+   "best": 80.13558633905112
+  },
+  {
+   "track": 0,
+   "part": "suspension",
+   "level": 3,
+   "tech": null,
+   "best": 79.9059337008582
+  },
+  {
+   "track": 0,
+   "part": "suspension",
+   "level": 5,
+   "tech": null,
+   "best": 79.61308431293004
+  },
+  {
+   "track": 0,
+   "part": "suspension",
+   "level": 7,
+   "tech": null,
+   "best": 79.46419094053819
+  },
+  {
+   "track": 1,
+   "part": "engine",
+   "level": 1,
+   "tech": null,
+   "best": 83.77166763180408
+  },
+  {
+   "track": 1,
+   "part": "engine",
+   "level": 2,
+   "tech": null,
+   "best": 83.25537747289087
+  },
+  {
+   "track": 1,
+   "part": "engine",
+   "level": 3,
+   "tech": null,
+   "best": 82.89347042912745
+  },
+  {
+   "track": 1,
+   "part": "engine",
+   "level": 5,
+   "tech": null,
+   "best": 82.49501684892523
+  },
+  {
+   "track": 1,
+   "part": "engine",
+   "level": 7,
+   "tech": null,
+   "best": 82.32043241854595
+  },
+  {
+   "track": 1,
+   "part": "aero",
+   "level": 1,
+   "tech": null,
+   "best": 84.34831714775738
+  },
+  {
+   "track": 1,
+   "part": "aero",
+   "level": 2,
+   "tech": null,
+   "best": 84.23888262386377
+  },
+  {
+   "track": 1,
+   "part": "aero",
+   "level": 3,
+   "tech": null,
+   "best": 84.16317024121338
+  },
+  {
+   "track": 1,
+   "part": "aero",
+   "level": 5,
+   "tech": null,
+   "best": 84.07937163221779
+  },
+  {
+   "track": 1,
+   "part": "aero",
+   "level": 7,
+   "tech": null,
+   "best": 84.03879076130389
+  },
+  {
+   "track": 1,
+   "part": "bodywork",
+   "level": 1,
+   "tech": null,
+   "best": 84.10389113749075
+  },
+  {
+   "track": 1,
+   "part": "bodywork",
+   "level": 2,
+   "tech": null,
+   "best": 83.76696744521668
+  },
+  {
+   "track": 1,
+   "part": "bodywork",
+   "level": 3,
+   "tech": null,
+   "best": 83.51834272317119
+  },
+  {
+   "track": 1,
+   "part": "bodywork",
+   "level": 5,
+   "tech": null,
+   "best": 83.20381670772258
+  },
+  {
+   "track": 1,
+   "part": "bodywork",
+   "level": 7,
+   "tech": null,
+   "best": 83.02342920797277
+  },
+  {
+   "track": 1,
+   "part": "chassis",
+   "level": 1,
+   "tech": null,
+   "best": 84.47849546237613
+  },
+  {
+   "track": 1,
+   "part": "chassis",
+   "level": 2,
+   "tech": null,
+   "best": 84.42072890284483
+  },
+  {
+   "track": 1,
+   "part": "chassis",
+   "level": 3,
+   "tech": null,
+   "best": 84.38799500956713
+  },
+  {
+   "track": 1,
+   "part": "chassis",
+   "level": 5,
+   "tech": null,
+   "best": 84.31703600042454
+  },
+  {
+   "track": 1,
+   "part": "chassis",
+   "level": 7,
+   "tech": null,
+   "best": 84.31257063869141
+  },
+  {
+   "track": 1,
+   "part": "brakes",
+   "level": 1,
+   "tech": null,
+   "best": 84.564450332131
+  },
+  {
+   "track": 1,
+   "part": "brakes",
+   "level": 2,
+   "tech": null,
+   "best": 84.58899247177158
+  },
+  {
+   "track": 1,
+   "part": "brakes",
+   "level": 3,
+   "tech": null,
+   "best": 84.59756111462178
+  },
+  {
+   "track": 1,
+   "part": "brakes",
+   "level": 5,
+   "tech": null,
+   "best": 84.6411719777747
+  },
+  {
+   "track": 1,
+   "part": "brakes",
+   "level": 7,
+   "tech": null,
+   "best": 84.65866286170476
+  },
+  {
+   "track": 1,
+   "part": "cooling",
+   "level": 1,
+   "tech": null,
+   "best": 84.57759125811728
+  },
+  {
+   "track": 1,
+   "part": "cooling",
+   "level": 2,
+   "tech": null,
+   "best": 84.6367140051077
+  },
+  {
+   "track": 1,
+   "part": "cooling",
+   "level": 3,
+   "tech": null,
+   "best": 84.68309516888344
+  },
+  {
+   "track": 1,
+   "part": "cooling",
+   "level": 5,
+   "tech": null,
+   "best": 84.75750427767696
+  },
+  {
+   "track": 1,
+   "part": "cooling",
+   "level": 7,
+   "tech": null,
+   "best": 84.8170288905774
+  },
+  {
+   "track": 1,
+   "part": "suspension",
+   "level": 1,
+   "tech": null,
+   "best": 84.31131316920035
+  },
+  {
+   "track": 1,
+   "part": "suspension",
+   "level": 2,
+   "tech": null,
+   "best": 84.14051677032724
+  },
+  {
+   "track": 1,
+   "part": "suspension",
+   "level": 3,
+   "tech": null,
+   "best": 83.99596039897135
+  },
+  {
+   "track": 1,
+   "part": "suspension",
+   "level": 5,
+   "tech": null,
+   "best": 83.79157739320564
+  },
+  {
+   "track": 1,
+   "part": "suspension",
+   "level": 7,
+   "tech": null,
+   "best": 83.72778399243445
+  },
+  {
+   "track": 2,
+   "part": "engine",
+   "level": 1,
+   "tech": null,
+   "best": 74.3406621274326
+  },
+  {
+   "track": 2,
+   "part": "engine",
+   "level": 2,
+   "tech": null,
+   "best": 74.10562862604223
+  },
+  {
+   "track": 2,
+   "part": "engine",
+   "level": 3,
+   "tech": null,
+   "best": 74.00022552548472
+  },
+  {
+   "track": 2,
+   "part": "engine",
+   "level": 5,
+   "tech": null,
+   "best": 73.89708795934284
+  },
+  {
+   "track": 2,
+   "part": "engine",
+   "level": 7,
+   "tech": null,
+   "best": 73.8489857880294
+  },
+  {
+   "track": 2,
+   "part": "aero",
+   "level": 1,
+   "tech": null,
+   "best": 73.94590734732205
+  },
+  {
+   "track": 2,
+   "part": "aero",
+   "level": 2,
+   "tech": null,
+   "best": 73.44358711369681
+  },
+  {
+   "track": 2,
+   "part": "aero",
+   "level": 3,
+   "tech": null,
+   "best": 73.12968667214973
+  },
+  {
+   "track": 2,
+   "part": "aero",
+   "level": 5,
+   "tech": null,
+   "best": 72.69230677972574
+  },
+  {
+   "track": 2,
+   "part": "aero",
+   "level": 7,
+   "tech": null,
+   "best": 72.48906141530843
+  },
+  {
+   "track": 2,
+   "part": "bodywork",
+   "level": 1,
+   "tech": null,
+   "best": 74.46183685603114
+  },
+  {
+   "track": 2,
+   "part": "bodywork",
+   "level": 2,
+   "tech": null,
+   "best": 74.30316537609849
+  },
+  {
+   "track": 2,
+   "part": "bodywork",
+   "level": 3,
+   "tech": null,
+   "best": 74.206240937071
+  },
+  {
+   "track": 2,
+   "part": "bodywork",
+   "level": 5,
+   "tech": null,
+   "best": 74.0623979561141
+  },
+  {
+   "track": 2,
+   "part": "bodywork",
+   "level": 7,
+   "tech": null,
+   "best": 74.00279978122084
+  },
+  {
+   "track": 2,
+   "part": "chassis",
+   "level": 1,
+   "tech": null,
+   "best": 74.60560459365126
+  },
+  {
+   "track": 2,
+   "part": "chassis",
+   "level": 2,
+   "tech": null,
+   "best": 74.52616103452839
+  },
+  {
+   "track": 2,
+   "part": "chassis",
+   "level": 3,
+   "tech": null,
+   "best": 74.47939581752911
+  },
+  {
+   "track": 2,
+   "part": "chassis",
+   "level": 5,
+   "tech": null,
+   "best": 74.46577097519526
+  },
+  {
+   "track": 2,
+   "part": "chassis",
+   "level": 7,
+   "tech": null,
+   "best": 74.4167595230839
+  },
+  {
+   "track": 2,
+   "part": "brakes",
+   "level": 1,
+   "tech": null,
+   "best": 74.66166133113722
+  },
+  {
+   "track": 2,
+   "part": "brakes",
+   "level": 2,
+   "tech": null,
+   "best": 74.68302493774918
+  },
+  {
+   "track": 2,
+   "part": "brakes",
+   "level": 3,
+   "tech": null,
+   "best": 74.70612638239875
+  },
+  {
+   "track": 2,
+   "part": "brakes",
+   "level": 5,
+   "tech": null,
+   "best": 74.71969298112022
+  },
+  {
+   "track": 2,
+   "part": "brakes",
+   "level": 7,
+   "tech": null,
+   "best": 74.71100842462428
+  },
+  {
+   "track": 2,
+   "part": "cooling",
+   "level": 1,
+   "tech": null,
+   "best": 74.84178213647333
+  },
+  {
+   "track": 2,
+   "part": "cooling",
+   "level": 2,
+   "tech": null,
+   "best": 74.95872140715515
+  },
+  {
+   "track": 2,
+   "part": "cooling",
+   "level": 3,
+   "tech": null,
+   "best": 75.07041663444164
+  },
+  {
+   "track": 2,
+   "part": "cooling",
+   "level": 5,
+   "tech": null,
+   "best": 75.23421158419374
+  },
+  {
+   "track": 2,
+   "part": "cooling",
+   "level": 7,
+   "tech": null,
+   "best": 75.34462948828384
+  },
+  {
+   "track": 2,
+   "part": "suspension",
+   "level": 1,
+   "tech": null,
+   "best": 74.05769257854988
+  },
+  {
+   "track": 2,
+   "part": "suspension",
+   "level": 2,
+   "tech": null,
+   "best": 73.69793100352747
+  },
+  {
+   "track": 2,
+   "part": "suspension",
+   "level": 3,
+   "tech": null,
+   "best": 73.39974853354194
+  },
+  {
+   "track": 2,
+   "part": "suspension",
+   "level": 5,
+   "tech": null,
+   "best": 73.04860515058274
+  },
+  {
+   "track": 2,
+   "part": "suspension",
+   "level": 7,
+   "tech": null,
+   "best": 72.87409435905458
+  },
+  {
+   "track": 3,
+   "part": "engine",
+   "level": 1,
+   "tech": null,
+   "best": 66.17440790666005
+  },
+  {
+   "track": 3,
+   "part": "engine",
+   "level": 2,
+   "tech": null,
+   "best": 65.7433246892582
+  },
+  {
+   "track": 3,
+   "part": "engine",
+   "level": 3,
+   "tech": null,
+   "best": 65.46607956928695
+  },
+  {
+   "track": 3,
+   "part": "engine",
+   "level": 5,
+   "tech": null,
+   "best": 65.15018406778336
+  },
+  {
+   "track": 3,
+   "part": "engine",
+   "level": 7,
+   "tech": null,
+   "best": 65.01910564641994
+  },
+  {
+   "track": 3,
+   "part": "aero",
+   "level": 1,
+   "tech": null,
+   "best": 66.58583363663986
+  },
+  {
+   "track": 3,
+   "part": "aero",
+   "level": 2,
+   "tech": null,
+   "best": 66.48585851349135
+  },
+  {
+   "track": 3,
+   "part": "aero",
+   "level": 3,
+   "tech": null,
+   "best": 66.41276735613381
+  },
+  {
+   "track": 3,
+   "part": "aero",
+   "level": 5,
+   "tech": null,
+   "best": 66.33762927803998
+  },
+  {
+   "track": 3,
+   "part": "aero",
+   "level": 7,
+   "tech": null,
+   "best": 66.32159592037779
+  },
+  {
+   "track": 3,
+   "part": "bodywork",
+   "level": 1,
+   "tech": null,
+   "best": 66.44281731013255
+  },
+  {
+   "track": 3,
+   "part": "bodywork",
+   "level": 2,
+   "tech": null,
+   "best": 66.15440921202354
+  },
+  {
+   "track": 3,
+   "part": "bodywork",
+   "level": 3,
+   "tech": null,
+   "best": 65.94347536930651
+  },
+  {
+   "track": 3,
+   "part": "bodywork",
+   "level": 5,
+   "tech": null,
+   "best": 65.66362891066629
+  },
+  {
+   "track": 3,
+   "part": "bodywork",
+   "level": 7,
+   "tech": null,
+   "best": 65.5287671999379
+  },
+  {
+   "track": 3,
+   "part": "chassis",
+   "level": 1,
+   "tech": null,
+   "best": 66.74611834668345
+  },
+  {
+   "track": 3,
+   "part": "chassis",
+   "level": 2,
+   "tech": null,
+   "best": 66.6774596495047
+  },
+  {
+   "track": 3,
+   "part": "chassis",
+   "level": 3,
+   "tech": null,
+   "best": 66.62669323290525
+  },
+  {
+   "track": 3,
+   "part": "chassis",
+   "level": 5,
+   "tech": null,
+   "best": 66.5822092735294
+  },
+  {
+   "track": 3,
+   "part": "chassis",
+   "level": 7,
+   "tech": null,
+   "best": 66.54368901791815
+  },
+  {
+   "track": 3,
+   "part": "brakes",
+   "level": 1,
+   "tech": null,
+   "best": 66.84096957836947
+  },
+  {
+   "track": 3,
+   "part": "brakes",
+   "level": 2,
+   "tech": null,
+   "best": 66.86121115507773
+  },
+  {
+   "track": 3,
+   "part": "brakes",
+   "level": 3,
+   "tech": null,
+   "best": 66.87010036907809
+  },
+  {
+   "track": 3,
+   "part": "brakes",
+   "level": 5,
+   "tech": null,
+   "best": 66.88458640012678
+  },
+  {
+   "track": 3,
+   "part": "brakes",
+   "level": 7,
+   "tech": null,
+   "best": 66.91813389485745
+  },
+  {
+   "track": 3,
+   "part": "cooling",
+   "level": 1,
+   "tech": null,
+   "best": 66.85844396873885
+  },
+  {
+   "track": 3,
+   "part": "cooling",
+   "level": 2,
+   "tech": null,
+   "best": 66.89983866105253
+  },
+  {
+   "track": 3,
+   "part": "cooling",
+   "level": 3,
+   "tech": null,
+   "best": 66.9421416490351
+  },
+  {
+   "track": 3,
+   "part": "cooling",
+   "level": 5,
+   "tech": null,
+   "best": 67.00152057503556
+  },
+  {
+   "track": 3,
+   "part": "cooling",
+   "level": 7,
+   "tech": null,
+   "best": 67.05382678136769
+  },
+  {
+   "track": 3,
+   "part": "suspension",
+   "level": 1,
+   "tech": null,
+   "best": 66.6533935464317
+  },
+  {
+   "track": 3,
+   "part": "suspension",
+   "level": 2,
+   "tech": null,
+   "best": 66.52506171846672
+  },
+  {
+   "track": 3,
+   "part": "suspension",
+   "level": 3,
+   "tech": null,
+   "best": 66.44981899730497
+  },
+  {
+   "track": 3,
+   "part": "suspension",
+   "level": 5,
+   "tech": null,
+   "best": 66.33801703048339
+  },
+  {
+   "track": 3,
+   "part": "suspension",
+   "level": 7,
+   "tech": null,
+   "best": 66.29738668083304
+  },
+  {
+   "track": 0,
+   "part": null,
+   "level": 0,
+   "tech": "energy_recovery",
+   "best": 80.57282948595908
+  },
+  {
+   "track": 0,
+   "part": null,
+   "level": 0,
+   "tech": "low_drag",
+   "best": 80.7739409274638
+  },
+  {
+   "track": 0,
+   "part": null,
+   "level": 0,
+   "tech": "tyre_telemetry",
+   "best": 80.89830185408779
+  },
+  {
+   "track": 1,
+   "part": null,
+   "level": 0,
+   "tech": "energy_recovery",
+   "best": 84.01193405553938
+  },
+  {
+   "track": 1,
+   "part": null,
+   "level": 0,
+   "tech": "low_drag",
+   "best": 84.26454882993504
+  },
+  {
+   "track": 1,
+   "part": null,
+   "level": 0,
+   "tech": "tyre_telemetry",
+   "best": 84.54020517791722
+  },
+  {
+   "track": 2,
+   "part": null,
+   "level": 0,
+   "tech": "energy_recovery",
+   "best": 74.4527347316511
+  },
+  {
+   "track": 2,
+   "part": null,
+   "level": 0,
+   "tech": "low_drag",
+   "best": 74.51435856458312
+  },
+  {
+   "track": 2,
+   "part": null,
+   "level": 0,
+   "tech": "tyre_telemetry",
+   "best": 74.65519634061009
+  },
+  {
+   "track": 3,
+   "part": null,
+   "level": 0,
+   "tech": "energy_recovery",
+   "best": 66.39668359759217
+  },
+  {
+   "track": 3,
+   "part": null,
+   "level": 0,
+   "tech": "low_drag",
+   "best": 66.58383932286557
+  },
+  {
+   "track": 3,
+   "part": null,
+   "level": 0,
+   "tech": "tyre_telemetry",
+   "best": 66.83535012589951
+  }
+ ]
+}

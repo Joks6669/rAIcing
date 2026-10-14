@@ -1149,7 +1149,9 @@ class LeagueService:
                 ent = explicit.get(d.id)
                 is_explicit = ent is not None and ent.submitted_at is not None
                 if team.is_system:
-                    setup = Setup()
+                    # same personality and car for both drivers: without a different setup the
+                    # deterministic engine gives them identical laps (tied qualifying times)
+                    setup = Setup() if d.id.endswith("-1") else Setup(wing=0.42, brake_bias=0.56)
                     e = Entry(self._entry_id(d), team.id, team.name, d.name,
                               reference=team.reference_personality or "pro", setup=setup,
                               spec=build_spec(regs, mods, setup), color=team.color, driver_id=d.id)

@@ -245,8 +245,10 @@ Non vérifié par la session principale : relecture de `service.py` (83 Ko) cont
    JavaScript ni débordement horizontal (1440 px et 390 px) ; lecture du replay et caméra « Suivre »
    vérifiées. Corrigés : nombre d'écuries écrit en dur sur l'accueil, écart incohérent affiché pour une
    voiture aux stands dans le replay. Captures à jour dans `web/screenshots/`.
-5. **Équilibrage** : simuler des stratégies 0/1/2 arrêts sur plusieurs circuits (il faut que plusieurs
-   soient viables selon le circuit), coût/gain des pièces, taux d'abandons au premier tour.
+5. ~~Équilibrage~~ (fait le 14/10/2026, voir `docs/BALANCE.md`) : stratégies 0/1/2 arrêts toutes viables ;
+   refroidissement corrigé (élargit la fenêtre de température au lieu de surrefroidir) ; sorties en peloton
+   des pilotes de référence réduites ; coéquipiers système départagés. **Restent à trancher par Gabriel** :
+   la pièce « freins » (inutile physiquement) et le niveau d'attrition (~30 %).
 6. **Saison de démonstration** : ligue locale (`stewards init`), écuries système + 1–2 écuries avec des
    cerveaux entraînés, 10 manches, puis publication d'un aperçu.
 7. **Déploiement** : `docker-compose` (postgres, api, worker, web), CI GitHub Actions (pytest + build web).

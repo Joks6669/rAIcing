@@ -33,7 +33,7 @@ PARTS: dict[str, Part] = {
     "bodywork": Part("bodywork", "Carrosserie basse traînée", 55, 1.0, 1.0, 0.5, "Traînée (CdA)", 0.12),
     "chassis": Part("chassis", "Châssis", 60, 0.0, 0.0, -4.0, "Masse et capacité d'intégration", 0.0),
     "brakes": Part("brakes", "Freins", 40, 0.5, 1.0, 1.0, "Force de freinage", 0.25),
-    "cooling": Part("cooling", "Refroidissement", 45, 1.0, 0.0, 1.5, "Capacité thermique et refroidissement des pneus", 0.14),
+    "cooling": Part("cooling", "Refroidissement", 45, 1.0, 0.0, 1.5, "Capacité thermique et stabilité thermique des pneus", 0.14),
     "suspension": Part("suspension", "Suspension", 50, 0.5, 0.0, 1.0, "Adhérence mécanique et usure", 0.05),
 }
 

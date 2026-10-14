@@ -1,0 +1,6175 @@
+{
+ "overrides": [],
+ "summary": [
+  {
+   "track": 0,
+   "laps": 15,
+   "best": {
+    "0": {
+     "track": 0,
+     "laps": 15,
+     "start": "hard",
+     "stops": [],
+     "n_stops": 0,
+     "ok": true,
+     "reason": "",
+     "time": 1255.7660697495364,
+     "wear_end": 0.709
+    },
+    "1": {
+     "track": 0,
+     "laps": 15,
+     "start": "medium",
+     "stops": [
+      [
+       8,
+       "medium"
+      ]
+     ],
+     "n_stops": 1,
+     "ok": true,
+     "reason": "",
+     "time": 1249.6149616969635,
+     "wear_end": 0.558
+    },
+    "2": {
+     "track": 0,
+     "laps": 15,
+     "start": "soft",
+     "stops": [
+      [
+       4,
+       "soft"
+      ],
+      [
+       9,
+       "medium"
+      ]
+     ],
+     "n_stops": 2,
+     "ok": true,
+     "reason": "",
+     "time": 1257.2600892811406,
+     "wear_end": 0.48
+    }
+   },
+   "winner": 1,
+   "gap": 6.1511080525729085
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "best": {
+    "0": {
+     "track": 1,
+     "laps": 14,
+     "start": "hard",
+     "stops": [],
+     "n_stops": 0,
+     "ok": true,
+     "reason": "",
+     "time": 1205.1029949696936,
+     "wear_end": 0.623
+    },
+    "1": {
+     "track": 1,
+     "laps": 14,
+     "start": "medium",
+     "stops": [
+      [
+       7,
+       "medium"
+      ]
+     ],
+     "n_stops": 1,
+     "ok": true,
+     "reason": "",
+     "time": 1214.042639336847,
+     "wear_end": 0.512
+    },
+    "2": {
+     "track": 1,
+     "laps": 14,
+     "start": "soft",
+     "stops": [
+      [
+       4,
+       "soft"
+      ],
+      [
+       8,
+       "medium"
+      ]
+     ],
+     "n_stops": 2,
+     "ok": true,
+     "reason": "",
+     "time": 1229.1173098534343,
+     "wear_end": 0.439
+    }
+   },
+   "winner": 0,
+   "gap": 8.939644367153505
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "best": {
+    "0": {
+     "track": 2,
+     "laps": 15,
+     "start": "medium",
+     "stops": [],
+     "n_stops": 0,
+     "ok": true,
+     "reason": "",
+     "time": 1174.6718448567997,
+     "wear_end": 0.808
+    },
+    "1": {
+     "track": 2,
+     "laps": 15,
+     "start": "soft",
+     "stops": [
+      [
+       8,
+       "soft"
+      ]
+     ],
+     "n_stops": 1,
+     "ok": true,
+     "reason": "",
+     "time": 1135.2228704714626,
+     "wear_end": 0.698
+    },
+    "2": {
+     "track": 2,
+     "laps": 15,
+     "start": "soft",
+     "stops": [
+      [
+       5,
+       "soft"
+      ],
+      [
+       10,
+       "soft"
+      ]
+     ],
+     "n_stops": 2,
+     "ok": true,
+     "reason": "",
+     "time": 1134.4099705564295,
+     "wear_end": 0.502
+    }
+   },
+   "winner": 2,
+   "gap": 0.8128999150330856
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "best": {
+    "0": {
+     "track": 3,
+     "laps": 15,
+     "start": "hard",
+     "stops": [],
+     "n_stops": 0,
+     "ok": true,
+     "reason": "",
+     "time": 1022.1347913486761,
+     "wear_end": 0.594
+    },
+    "1": {
+     "track": 3,
+     "laps": 15,
+     "start": "medium",
+     "stops": [
+      [
+       8,
+       "medium"
+      ]
+     ],
+     "n_stops": 1,
+     "ok": true,
+     "reason": "",
+     "time": 1032.2390227713197,
+     "wear_end": 0.465
+    },
+    "2": {
+     "track": 3,
+     "laps": 15,
+     "start": "medium",
+     "stops": [
+      [
+       6,
+       "medium"
+      ],
+      [
+       11,
+       "soft"
+      ]
+     ],
+     "n_stops": 2,
+     "ok": true,
+     "reason": "",
+     "time": 1046.7702275099366,
+     "wear_end": 0.463
+    }
+   },
+   "winner": 0,
+   "gap": 10.10423142264358
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "best": {
+    "0": {
+     "track": 4,
+     "laps": 12,
+     "start": "hard",
+     "stops": [],
+     "n_stops": 0,
+     "ok": true,
+     "reason": "",
+     "time": 1288.4418502952246,
+     "wear_end": 0.596
+    },
+    "1": {
+     "track": 4,
+     "laps": 12,
+     "start": "soft",
+     "stops": [
+      [
+       5,
+       "medium"
+      ]
+     ],
+     "n_stops": 1,
+     "ok": true,
+     "reason": "",
+     "time": 1259.3510502441623,
+     "wear_end": 0.603
+    },
+    "2": {
+     "track": 4,
+     "laps": 12,
+     "start": "soft",
+     "stops": [
+      [
+       4,
+       "soft"
+      ],
+      [
+       8,
+       "soft"
+      ]
+     ],
+     "n_stops": 2,
+     "ok": true,
+     "reason": "",
+     "time": 1251.2083004318442,
+     "wear_end": 0.627
+    }
+   },
+   "winner": 2,
+   "gap": 8.142749812318016
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "best": {
+    "0": {
+     "track": 5,
+     "laps": 15,
+     "start": "hard",
+     "stops": [],
+     "n_stops": 0,
+     "ok": true,
+     "reason": "",
+     "time": 880.4229241909248,
+     "wear_end": 0.625
+    },
+    "1": {
+     "track": 5,
+     "laps": 15,
+     "start": "medium",
+     "stops": [
+      [
+       6,
+       "hard"
+      ]
+     ],
+     "n_stops": 1,
+     "ok": true,
+     "reason": "",
+     "time": 893.6938277602474,
+     "wear_end": 0.377
+    },
+    "2": {
+     "track": 5,
+     "laps": 15,
+     "start": "medium",
+     "stops": [
+      [
+       6,
+       "medium"
+      ],
+      [
+       11,
+       "soft"
+      ]
+     ],
+     "n_stops": 2,
+     "ok": true,
+     "reason": "",
+     "time": 910.4062749176028,
+     "wear_end": 0.485
+    }
+   },
+   "winner": 0,
+   "gap": 13.270903569322513
+  }
+ ],
+ "rows": [
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "hard",
+   "stops": [],
+   "n_stops": 0,
+   "ok": true,
+   "reason": "",
+   "time": 1255.7660697495364,
+   "wear_end": 0.709
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1254.3318162691917,
+   "wear_end": 0.523
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1260.4387431878054,
+   "wear_end": 0.863
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1256.862317377758,
+   "wear_end": 0.523
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1262.9887413959304,
+   "wear_end": 0.863
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1268.2887409232478,
+   "wear_end": 0.863
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1256.198363365568,
+   "wear_end": 0.429
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1254.3036439665457,
+   "wear_end": 0.713
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1253.5983656697174,
+   "wear_end": 0.429
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1251.7097676391006,
+   "wear_end": 0.713
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1257.453660448582,
+   "wear_end": 0.713
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "hard"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1254.7379853088808,
+   "wear_end": 0.334
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1249.6149616969635,
+   "wear_end": 0.558
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1253.6649566555873,
+   "wear_end": 0.558
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1262.3672666980451,
+   "wear_end": 0.967
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1258.336541867115,
+   "wear_end": 0.967
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     9,
+     "hard"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     9,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1257.391258938384,
+   "wear_end": 0.286
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1251.7600757940027,
+   "wear_end": 0.48
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1253.7100764867384,
+   "wear_end": 0.48
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1256.3781740150368,
+   "wear_end": 0.836
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1254.4226765272801,
+   "wear_end": 0.836
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     10,
+     "hard"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     10,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1261.7246681807437,
+   "wear_end": 0.238
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1256.1147833421842,
+   "wear_end": 0.4
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1254.8649416029068,
+   "wear_end": 0.4
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1254.1549830696854,
+   "wear_end": 0.702
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1255.4049872337116,
+   "wear_end": 0.702
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1259.922672268367,
+   "wear_end": 0.836
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "medium"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1260.6226770082574,
+   "wear_end": 0.836
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1262.472672268361,
+   "wear_end": 0.836
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1257.2600892811406,
+   "wear_end": 0.48
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "medium"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1263.1726770082612,
+   "wear_end": 0.836
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1257.7549834948888,
+   "wear_end": 0.702
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "medium"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1258.4549873970423,
+   "wear_end": 0.702
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1258.5549834948956,
+   "wear_end": 0.702
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1258.4649415747292,
+   "wear_end": 0.4
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     5,
+     "medium"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1259.254987397046,
+   "wear_end": 0.702
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1259.9851378423054,
+   "wear_end": 0.565
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "medium"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1260.685140540328,
+   "wear_end": 0.565
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "soft"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1257.3851378423237,
+   "wear_end": 0.565
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ],
+    [
+     11,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1262.441580068173,
+   "wear_end": 0.32
+  },
+  {
+   "track": 0,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "medium"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1258.0851405402627,
+   "wear_end": 0.565
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "hard",
+   "stops": [],
+   "n_stops": 0,
+   "ok": true,
+   "reason": "",
+   "time": 1205.1029949696936,
+   "wear_end": 0.623
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1216.3888146710094,
+   "wear_end": 0.444
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1217.922492572936,
+   "wear_end": 0.735
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1216.8388329387521,
+   "wear_end": 0.444
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1218.3720514420888,
+   "wear_end": 0.735
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "hard",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1220.8229302451093,
+   "wear_end": 0.735
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "hard",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1218.8287446838976,
+   "wear_end": 0.355
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1217.528934819876,
+   "wear_end": 0.586
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1215.8288912267176,
+   "wear_end": 0.355
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1214.5291100200602,
+   "wear_end": 0.586
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "hard",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1217.0312287026643,
+   "wear_end": 0.586
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "hard",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     7,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1222.9353558976434,
+   "wear_end": 0.31
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     7,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1220.942938788055,
+   "wear_end": 0.512
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     7,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1216.030370527577,
+   "wear_end": 0.31
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     7,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1214.042639336847,
+   "wear_end": 0.512
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "hard",
+   "stops": [
+    [
+     7,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1216.1930701024014,
+   "wear_end": 0.512
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "hard",
+   "stops": [
+    [
+     7,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1223.1462805147605,
+   "wear_end": 0.9
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     7,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1220.9962948538314,
+   "wear_end": 0.9
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     7,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1227.8944628207364,
+   "wear_end": 0.9
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "hard"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1216.867510629964,
+   "wear_end": 0.266
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1214.5173041013936,
+   "wear_end": 0.439
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "hard",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1215.96827129427,
+   "wear_end": 0.439
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "hard",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1219.0948577786594,
+   "wear_end": 0.771
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1217.6448904835786,
+   "wear_end": 0.771
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     10,
+     "hard"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     10,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1220.697170437552,
+   "wear_end": 0.178
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1218.3859284012367,
+   "wear_end": 0.292
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "hard",
+   "stops": [
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1216.985895068657,
+   "wear_end": 0.292
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "hard",
+   "stops": [
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1216.645612013406,
+   "wear_end": 0.511
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1218.0476718091313,
+   "wear_end": 0.511
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1232.2448479095444,
+   "wear_end": 0.771
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "medium"
+    ],
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1232.5948755688548,
+   "wear_end": 0.771
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1232.694847909545,
+   "wear_end": 0.771
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1229.1173098534343,
+   "wear_end": 0.439
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "medium"
+    ],
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1233.0448755688672,
+   "wear_end": 0.771
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1231.0378058460378,
+   "wear_end": 0.64
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "medium"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1231.3878369158429,
+   "wear_end": 0.64
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1230.2378045991923,
+   "wear_end": 0.64
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1230.1044806112925,
+   "wear_end": 0.366
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     5,
+     "medium"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1230.587836916022,
+   "wear_end": 0.64
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1232.2456110679232,
+   "wear_end": 0.511
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "medium"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1232.5956301651524,
+   "wear_end": 0.511
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "soft"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1229.2456100909117,
+   "wear_end": 0.511
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ],
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1232.5858931490657,
+   "wear_end": 0.292
+  },
+  {
+   "track": 1,
+   "laps": 14,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "medium"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1229.5956301657006,
+   "wear_end": 0.511
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [],
+   "n_stops": 0,
+   "ok": true,
+   "reason": "",
+   "time": 1174.6718448567997,
+   "wear_end": 0.808
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "hard",
+   "stops": [],
+   "n_stops": 0,
+   "ok": true,
+   "reason": "",
+   "time": 1175.075391772385,
+   "wear_end": 0.488
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1164.989702010034,
+   "wear_end": 0.359
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1149.9004247182604,
+   "wear_end": 0.609
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1173.039251990599,
+   "wear_end": 0.359
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1157.8997842840413,
+   "wear_end": 0.609
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1166.5516124355627,
+   "wear_end": 0.609
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1157.7571516723988,
+   "wear_end": 0.294
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1142.0897195935358,
+   "wear_end": 0.502
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1167.3874963594678,
+   "wear_end": 0.294
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1151.6560290880673,
+   "wear_end": 0.501
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1164.1898650123815,
+   "wear_end": 0.502
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1162.3837580656054,
+   "wear_end": 0.88
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1149.8062951027057,
+   "wear_end": 0.88
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1140.2077441454135,
+   "wear_end": 0.88
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1157.790281832258,
+   "wear_end": 0.229
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1143.8417103332624,
+   "wear_end": 0.392
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1164.4407097592189,
+   "wear_end": 0.229
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1150.5421523715638,
+   "wear_end": 0.392
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1165.6346267874583,
+   "wear_end": 0.392
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1157.0203680909594,
+   "wear_end": 0.698
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1141.8727238025322,
+   "wear_end": 0.698
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1135.2228704714626,
+   "wear_end": 0.698
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     9,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1162.2051993652783,
+   "wear_end": 0.196
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1149.8098885370882,
+   "wear_end": 0.336
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     9,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1164.1555707577227,
+   "wear_end": 0.196
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1151.8102122947435,
+   "wear_end": 0.336
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1167.5599229745874,
+   "wear_end": 0.336
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1158.2454391535052,
+   "wear_end": 0.602
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1142.4441405716757,
+   "wear_end": 0.601
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1140.4951962016291,
+   "wear_end": 0.602
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     10,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1170.6066570082496,
+   "wear_end": 0.164
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1160.0593059424953,
+   "wear_end": 0.28
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     10,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1164.8064219613912,
+   "wear_end": 0.164
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1154.2615116331024,
+   "wear_end": 0.28
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1170.1114453076652,
+   "wear_end": 0.28
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1161.2099659797536,
+   "wear_end": 0.502
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1145.3599458380193,
+   "wear_end": 0.502
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1151.1505928306415,
+   "wear_end": 0.502
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1135.4948516301026,
+   "wear_end": 0.601
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "medium"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1144.4441063342078,
+   "wear_end": 0.601
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1143.5448517677285,
+   "wear_end": 0.601
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1144.8686765995524,
+   "wear_end": 0.336
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "medium"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1152.4439977682057,
+   "wear_end": 0.601
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1134.4099705564295,
+   "wear_end": 0.502
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "medium"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1143.3599731740367,
+   "wear_end": 0.502
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1143.6599705177784,
+   "wear_end": 0.502
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1143.360258797226,
+   "wear_end": 0.28
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     5,
+     "medium"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1152.609959994393,
+   "wear_end": 0.502
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1135.5978637545381,
+   "wear_end": 0.401
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "medium"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1144.5478649440795,
+   "wear_end": 0.401
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "soft"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1145.1978637665868,
+   "wear_end": 0.401
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ],
+    [
+     11,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1143.3397932549994,
+   "wear_end": 0.224
+  },
+  {
+   "track": 2,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "medium"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1154.0978669554124,
+   "wear_end": 0.401
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [],
+   "n_stops": 0,
+   "ok": true,
+   "reason": "",
+   "time": 1037.5452223589643,
+   "wear_end": 0.966
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "hard",
+   "stops": [],
+   "n_stops": 0,
+   "ok": true,
+   "reason": "",
+   "time": 1022.1347913486761,
+   "wear_end": 0.594
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1033.6951964581694,
+   "wear_end": 0.439
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1036.312523141621,
+   "wear_end": 0.72
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1034.043592783776,
+   "wear_end": 0.439
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1036.663664816311,
+   "wear_end": 0.72
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1038.9125230748348,
+   "wear_end": 0.72
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1035.5769960056696,
+   "wear_end": 0.36
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1035.399215558622,
+   "wear_end": 0.593
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1033.1241056396445,
+   "wear_end": 0.36
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1032.949219240032,
+   "wear_end": 0.593
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1035.0492179458176,
+   "wear_end": 0.593
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1042.0851611771795,
+   "wear_end": 0.281
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1040.4888525034924,
+   "wear_end": 0.465
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1033.8368462403828,
+   "wear_end": 0.281
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1032.2390227713197,
+   "wear_end": 0.465
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1033.3948984099766,
+   "wear_end": 0.465
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1038.442361791686,
+   "wear_end": 0.796
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1037.292359164286,
+   "wear_end": 0.796
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1045.556503508906,
+   "wear_end": 0.796
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     9,
+     "hard"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     9,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1034.872646383718,
+   "wear_end": 0.241
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1032.9330173047504,
+   "wear_end": 0.4
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1033.2830173685397,
+   "wear_end": 0.4
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1035.9601988448294,
+   "wear_end": 0.686
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1035.6101986837193,
+   "wear_end": 0.686
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     10,
+     "hard"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     10,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1036.4824016566893,
+   "wear_end": 0.201
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1034.3996357646415,
+   "wear_end": 0.333
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1033.549732514426,
+   "wear_end": 0.333
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1034.5575946765555,
+   "wear_end": 0.576
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1035.4075964553676,
+   "wear_end": 0.576
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1050.2547439382229,
+   "wear_end": 0.686
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "medium"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1049.2101930381361,
+   "wear_end": 0.686
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1050.6047436302658,
+   "wear_end": 0.686
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1047.5835248846781,
+   "wear_end": 0.4
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "medium"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1049.56019303814,
+   "wear_end": 0.686
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1049.5075952826128,
+   "wear_end": 0.576
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "medium"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1048.457159874748,
+   "wear_end": 0.575
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1048.707595018005,
+   "wear_end": 0.576
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1048.4996356646704,
+   "wear_end": 0.333
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     5,
+     "medium"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1047.6571598747614,
+   "wear_end": 0.575
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1050.269972146635,
+   "wear_end": 0.463
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "medium"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1049.2202275099298,
+   "wear_end": 0.463
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "soft"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1047.7699717605246,
+   "wear_end": 0.463
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ],
+    [
+     11,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1050.4213073557435,
+   "wear_end": 0.267
+  },
+  {
+   "track": 3,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "medium"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1046.7702275099366,
+   "wear_end": 0.463
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [],
+   "n_stops": 0,
+   "ok": true,
+   "reason": "",
+   "time": 1316.7840702301035,
+   "wear_end": 0.966
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "hard",
+   "stops": [],
+   "n_stops": 0,
+   "ok": true,
+   "reason": "",
+   "time": 1288.4418502952246,
+   "wear_end": 0.596
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1272.5597253263377,
+   "wear_end": 0.403
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1262.1700664783841,
+   "wear_end": 0.683
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1280.1661116775513,
+   "wear_end": 0.403
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1269.786210605169,
+   "wear_end": 0.683
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "hard",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1280.8787706006997,
+   "wear_end": 0.683
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "hard",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1272.0687483118359,
+   "wear_end": 0.354
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1259.3510502441623,
+   "wear_end": 0.603
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     5,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1277.1659405326168,
+   "wear_end": 0.354
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     5,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1264.5049122962887,
+   "wear_end": 0.603
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "hard",
+   "stops": [
+    [
+     5,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1277.2922380413436,
+   "wear_end": 0.603
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "hard",
+   "stops": [
+    [
+     5,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     5,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1277.4590379988294,
+   "wear_end": 0.304
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1264.2115740743734,
+   "wear_end": 0.521
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1276.059254059829,
+   "wear_end": 0.304
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1262.8115727997408,
+   "wear_end": 0.521
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "hard",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1276.2618151770537,
+   "wear_end": 0.521
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "hard",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1277.7937962712788,
+   "wear_end": 0.91
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1264.3437991302487,
+   "wear_end": 0.91
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1265.7438077477382,
+   "wear_end": 0.91
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     7,
+     "hard"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     7,
+     "medium"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     7,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1277.066695433922,
+   "wear_end": 0.253
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     7,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1264.5123292549313,
+   "wear_end": 0.436
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "hard",
+   "stops": [
+    [
+     7,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1277.4599217363316,
+   "wear_end": 0.436
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "hard",
+   "stops": [
+    [
+     7,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1272.578613478205,
+   "wear_end": 0.773
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     7,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1259.628738010706,
+   "wear_end": 0.773
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     7,
+     "soft"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "hard"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1280.7763475285524,
+   "wear_end": 0.203
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1269.8639375914174,
+   "wear_end": 0.35
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "hard",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1280.4639386256397,
+   "wear_end": 0.35
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "hard",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1273.1583001426454,
+   "wear_end": 0.627
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 1262.5583001514365,
+   "wear_end": 0.627
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     3,
+     "soft"
+    ],
+    [
+     7,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1254.5287404743192,
+   "wear_end": 0.773
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     3,
+     "medium"
+    ],
+    [
+     7,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1261.8432505357398,
+   "wear_end": 0.773
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     3,
+     "soft"
+    ],
+    [
+     7,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1262.078740474307,
+   "wear_end": 0.773
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     3,
+     "soft"
+    ],
+    [
+     7,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1259.4127183374349,
+   "wear_end": 0.436
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     3,
+     "medium"
+    ],
+    [
+     7,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1269.3932505358412,
+   "wear_end": 0.773
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1251.2083004318442,
+   "wear_end": 0.627
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "medium"
+    ],
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1258.5083002290414,
+   "wear_end": 0.627
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1258.8083004318362,
+   "wear_end": 0.627
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1258.514686207948,
+   "wear_end": 0.35
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "medium"
+    ],
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1266.1084105430914,
+   "wear_end": 0.627
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1254.6270916167034,
+   "wear_end": 0.474
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "medium"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1261.9183167624371,
+   "wear_end": 0.474
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1259.7270920203512,
+   "wear_end": 0.474
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1261.8969965453355,
+   "wear_end": 0.263
+  },
+  {
+   "track": 4,
+   "laps": 12,
+   "start": "medium",
+   "stops": [
+    [
+     5,
+     "medium"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 1267.0183167626205,
+   "wear_end": 0.474
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "hard",
+   "stops": [],
+   "n_stops": 0,
+   "ok": true,
+   "reason": "",
+   "time": 880.4229241909248,
+   "wear_end": 0.625
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 894.7953051550011,
+   "wear_end": 0.459
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 899.3918277240138,
+   "wear_end": 0.757
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 893.8953051878967,
+   "wear_end": 0.459
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 898.4918486348251,
+   "wear_end": 0.757
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     4,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 899.6418486278757,
+   "wear_end": 0.757
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 897.8938277417953,
+   "wear_end": 0.377
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 899.6657174615389,
+   "wear_end": 0.621
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 893.6938277602474,
+   "wear_end": 0.377
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 895.465717516337,
+   "wear_end": 0.621
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     6,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 895.9657174238436,
+   "wear_end": 0.621
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 905.5929000151345,
+   "wear_end": 0.293
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 905.7231623858195,
+   "wear_end": 0.484
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 894.792899917279,
+   "wear_end": 0.293
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 894.9231621459943,
+   "wear_end": 0.484
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     8,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 894.1731623369268,
+   "wear_end": 0.484
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 901.2265507721088,
+   "wear_end": 0.84
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 901.9804592080119,
+   "wear_end": 0.84
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     8,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 912.7765508219816,
+   "wear_end": 0.84
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     9,
+     "hard"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     9,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 895.8863903857055,
+   "wear_end": 0.252
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 895.4753981997776,
+   "wear_end": 0.416
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 893.7753981348689,
+   "wear_end": 0.416
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 898.1290821881278,
+   "wear_end": 0.722
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 899.8285926835638,
+   "wear_end": 0.722
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     10,
+     "hard"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     10,
+     "hard"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 897.4521192118619,
+   "wear_end": 0.21
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 896.6608754723603,
+   "wear_end": 0.348
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 893.760892012919,
+   "wear_end": 0.348
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "hard",
+   "stops": [
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 896.1813144141054,
+   "wear_end": 0.604
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 1,
+   "ok": true,
+   "reason": "",
+   "time": 899.0813141013432,
+   "wear_end": 0.604
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 0,
+   "ok": false,
+   "reason": "tyre",
+   "time": null,
+   "wear_end": 1.0
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 917.0290822117146,
+   "wear_end": 0.722
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "medium"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 914.5790822046368,
+   "wear_end": 0.722
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 916.1290822117127,
+   "wear_end": 0.722
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     4,
+     "soft"
+    ],
+    [
+     9,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 912.6753981560358,
+   "wear_end": 0.416
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     4,
+     "medium"
+    ],
+    [
+     9,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 913.6790822046665,
+   "wear_end": 0.722
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 916.2813144107988,
+   "wear_end": 0.604
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "medium"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 913.8313144026312,
+   "wear_end": 0.604
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 913.9813144108033,
+   "wear_end": 0.604
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     5,
+     "soft"
+    ],
+    [
+     10,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 913.8608920102702,
+   "wear_end": 0.348
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     5,
+     "medium"
+    ],
+    [
+     10,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 911.5313144026335,
+   "wear_end": 0.604
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 917.0562749254133,
+   "wear_end": 0.485
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "medium"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 914.6062749176041,
+   "wear_end": 0.485
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "soft"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 912.8562749253697,
+   "wear_end": 0.485
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "soft",
+   "stops": [
+    [
+     6,
+     "soft"
+    ],
+    [
+     11,
+     "medium"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 916.0101515999771,
+   "wear_end": 0.279
+  },
+  {
+   "track": 5,
+   "laps": 15,
+   "start": "medium",
+   "stops": [
+    [
+     6,
+     "medium"
+    ],
+    [
+     11,
+     "soft"
+    ]
+   ],
+   "n_stops": 2,
+   "ok": true,
+   "reason": "",
+   "time": 910.4062749176028,
+   "wear_end": 0.485
+  }
+ ]
+}
