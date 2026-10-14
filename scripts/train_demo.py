@@ -96,6 +96,10 @@ def main() -> int:
     bc_dir = out / f"{args.name}-bc"
     if args.skip_bc:
         brain = Brain.load(bc_dir)
+        if (bc_dir / "eval.json").exists():
+            rows = json.loads((bc_dir / "eval.json").read_text())
+            report["stages"].append({"name": f"{args.name}-bc", "method": "bc", "steps": brain.meta.get("steps"),
+                                     "eval": rows, "reused": True})
     else:
         cfg = {"driver_id": f"{args.name}-bc", "method": "bc", "steps": args.bc_steps, "envs": args.envs,
                "seed": args.seed, "architecture": arch,
