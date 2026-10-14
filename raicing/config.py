@@ -28,10 +28,10 @@ class CompoundSpec:
 
 def _default_compounds() -> dict[str, CompoundSpec]:
     return {
-        "soft": CompoundSpec(grip=1.00, t_opt=88.0, t_width=22.0, wear_rate=0.0210, wear_shape=1.6, wet_loss=0.55, dry_overheat=1.0),
-        "medium": CompoundSpec(grip=0.975, t_opt=95.0, t_width=26.0, wear_rate=0.0120, wear_shape=1.8, wet_loss=0.55, dry_overheat=1.0),
-        "hard": CompoundSpec(grip=0.950, t_opt=102.0, t_width=30.0, wear_rate=0.0072, wear_shape=2.0, wet_loss=0.55, dry_overheat=1.0),
-        "wet": CompoundSpec(grip=0.880, t_opt=70.0, t_width=24.0, wear_rate=0.0110, wear_shape=1.6, wet_loss=0.10, dry_overheat=2.2),
+        "soft": CompoundSpec(grip=1.00, t_opt=85.0, t_width=22.0, wear_rate=0.168, wear_shape=2.2, wet_loss=0.55, dry_overheat=1.0),
+        "medium": CompoundSpec(grip=0.970, t_opt=90.0, t_width=26.0, wear_rate=0.096, wear_shape=2.2, wet_loss=0.55, dry_overheat=1.0),
+        "hard": CompoundSpec(grip=0.945, t_opt=94.0, t_width=30.0, wear_rate=0.058, wear_shape=2.4, wet_loss=0.55, dry_overheat=1.0),
+        "wet": CompoundSpec(grip=0.880, t_opt=70.0, t_width=24.0, wear_rate=0.088, wear_shape=1.6, wet_loss=0.10, dry_overheat=2.2),
     }
 
 
