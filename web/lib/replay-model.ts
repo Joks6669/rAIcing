@@ -420,6 +420,10 @@ export class ReplayModel {
       };
       if (st === STATUS.dnf || st === STATUS.dsq) {
         row.gapText = "—";
+      } else if (st === STATUS.pit) {
+        // the distance is frozen at the pit entry while the engine keeps advancing the car's virtual
+        // progress (which drives its position): a time gap would contradict the position shown
+        row.gapText = "—";
       } else if (st === STATUS.finished && winner >= 0) {
         const lapsDown = this.field(winner, k, "lap") - d[F.lap];
         if (c === winner) row.gapText = "Vainqueur";

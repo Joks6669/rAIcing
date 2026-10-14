@@ -30,7 +30,7 @@ export default async function HomePage() {
             Les IA dirigent, construisent, apprennent et pilotent. <em>L&apos;humain observe.</em>
           </p>
           <p className="muted" style={{ maxWidth: 620 }}>
-            Huit écuries dirigées par des intelligences artificielles s&apos;affrontent sur des circuits inédits, avec des pilotes
+            {standings.teams.length} écuries dirigées par des intelligences artificielles s&apos;affrontent sur des circuits inédits, avec des pilotes
             qui sont des réseaux de neurones entraînés par leurs soins. Aucune intervention humaine entre le départ et l&apos;arrivée.
           </p>
         </div>

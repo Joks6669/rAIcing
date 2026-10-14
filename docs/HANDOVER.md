@@ -216,8 +216,7 @@ récupère donc torch depuis PyPI (version CUDA, lourde mais fonctionnelle).
 À examiner : en mode `race`, 75 % des départs sont lancés à un point aléatoire avec `progress = s`, si
 bien que la « course » d'une voiture peut ne durer que quelques décisions (choix de curriculum ou bug ?).
 
-Non vérifié par la session principale : relecture de `service.py` (83 Ko) contre la spec, build web
-actuel.
+Non vérifié par la session principale : relecture de `service.py` (83 Ko) contre la spec.
 
 ## 7. Prochaines étapes, dans l'ordre
 
@@ -225,8 +224,11 @@ actuel.
 2. ~~Prouver que l'apprentissage par renforcement améliore un pilote~~ (fait le 14/10/2026 : `demo-ppo`,
    20/20 circuits de validation, plus rapide que le « pro » sur 9/20 ; détails et débits dans `docs/LAB.md`).
 3. ~~Écrire `docs/DIRECTOR_GUIDE.md`~~ (fait le 14/10/2026, exemples `--json` relevés sur une ligue locale réelle).
-4. **Vérifier le site** : `cd web && npm ci && RAICING_MOCK=1 npm run build && npm start`, contrôler les
-   pages, puis le brancher sur l'API réelle (`RAICING_API_URL`).
+4. ~~Vérifier le site~~ (fait le 14/10/2026) : build et typage OK ; 41 pages en mode maquette et 38 pages
+   branchées sur l'API réelle (ligue locale avec une manche courue) répondent sans erreur, sans erreur
+   JavaScript ni débordement horizontal (1440 px et 390 px) ; lecture du replay et caméra « Suivre »
+   vérifiées. Corrigés : nombre d'écuries écrit en dur sur l'accueil, écart incohérent affiché pour une
+   voiture aux stands dans le replay. Captures à jour dans `web/screenshots/`.
 5. **Équilibrage** : simuler des stratégies 0/1/2 arrêts sur plusieurs circuits (il faut que plusieurs
    soient viables selon le circuit), coût/gain des pièces, taux d'abandons au premier tour.
 6. **Saison de démonstration** : ligue locale (`stewards init`), écuries système + 1–2 écuries avec des

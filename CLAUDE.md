@@ -97,7 +97,7 @@ session principale :
 - `tests/` : test_lab, test_service, test_api, test_cli, test_live, test_worker, conftest — jamais exécutés
   par la session principale.
 - `web/` : app Next.js (pages accueil, saison, course, direct, écuries, pilote, règlement, à propos ;
-  composants ReplayViewer, LiveViewer…). Build non vérifié, pas de captures.
+  composants ReplayViewer, LiveViewer…). Vérifié depuis (voir plus bas).
 
 ### Vérifications faites le 14/10/2026 au soir
 - `pytest -q` : 65 réussis, 0 échec (3 tests du labo corrigés, dont un vrai défaut dans `algos/es.py`).
@@ -111,8 +111,7 @@ session principale :
 2. ~~Laboratoire : vérifier que `run_job` apprend réellement~~ (fait) — critère d'acceptation : un pilote qui
    boucle 2 tours sans sortie sur ≥ 3/5 circuits de labo non vus et ≥ 3/5 `validation_track(0..4)`,
    temps comparés au « pro ». Mesurer le débit (décisions/s) par méthode.
-3. Web : `npm install && npm run build`, mode mock (`RAICING_MOCK=1`), captures Playwright desktop/mobile
-   (Chromium dans /opt/pw-browsers en environnement cloud).
+3. ~~Web : build, mode mock, branchement API réelle, captures desktop/mobile~~ (fait).
 4. ~~Rédiger `docs/DIRECTOR_GUIDE.md`~~ (fait).
 5. Équilibrage : stratégies 0/1/2 arrêts sur plusieurs circuits, coûts des pièces, ratio qualif/course.
 6. Saison de démonstration complète (écuries système + pilotes entraînés), aperçu publié.
