@@ -1,6 +1,6 @@
 # CLAUDE.md — rAIcing / AI Racing League
 
-Contexte de reprise pour une session Claude Code sans historique. Propriétaire : Gabriel Meunier
+Contexte de reprise pour une session Claude Code sans historique. **Lire d'abord `docs/HANDOVER.md`** (passation complète et détaillée). Travailler sur la branche `main` (la branche `claude/focused-galileo-jdvt9w` est un squelette générique sans rapport, sans ancêtre commun). Propriétaire : Gabriel Meunier
 (francophone ; interface et docs en français, code et commentaires en anglais).
 
 ## Concept
@@ -99,6 +99,13 @@ session principale :
 - `web/` : app Next.js (pages accueil, saison, course, direct, écuries, pilote, règlement, à propos ;
   composants ReplayViewer, LiveViewer…). Build non vérifié, pas de captures.
 - `docs/DIRECTOR_GUIDE.md` : peut ne pas exister ou être incomplet.
+
+### Vérifications faites le 14/10/2026 au soir
+- `pytest -q` : 62 réussis, 3 échecs (tous dans tests/test_lab.py : test_vecenv_shapes[traffic],
+  test_crash_penalty_and_reset, test_es_one_generation).
+- `demo_brains/demo-bc` (imitation du « pro ») : 2 tours sans sortie sur 5/5 circuits de labo et 4/5 de
+  validation, à 0–2 % du « pro ». Critère d'acceptation atteint pour BC ; RL non encore démontré.
+- `docs/DIRECTOR_GUIDE.md` n'existe pas.
 
 ### Prochaines étapes (dans cet ordre)
 1. `pytest -x -q` ; corriger jusqu'au vert. Relire service.py / app.py contre `docs/LEAGUE.md` et `docs/API.md`.
