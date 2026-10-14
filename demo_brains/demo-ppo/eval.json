@@ -1,0 +1,132 @@
+[
+ {
+  "track": "lab:0",
+  "name": "Circuit de Saintfort",
+  "length": 5025.3,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   83.357,
+   83.386
+  ],
+  "best": 83.357
+ },
+ {
+  "track": "lab:1",
+  "name": "Circuit de Vertmare",
+  "length": 3983.2,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   67.354,
+   67.405
+  ],
+  "best": 67.354
+ },
+ {
+  "track": "lab:2",
+  "name": "Circuit de Montfontaine",
+  "length": 3364.7,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   58.193,
+   57.901
+  ],
+  "best": 57.901
+ },
+ {
+  "track": "lab:3",
+  "name": "Circuit de Lunecombe",
+  "length": 4142.0,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   52.092,
+   52.151
+  ],
+  "best": 52.092
+ },
+ {
+  "track": "lab:4",
+  "name": "Circuit de Belhaye",
+  "length": 5473.4,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   93.618,
+   93.123
+  ],
+  "best": 93.123
+ },
+ {
+  "track": "val:0",
+  "name": "Circuit de Rivecombe",
+  "length": 4890.2,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   82.22,
+   82.554
+  ],
+  "best": 82.22
+ },
+ {
+  "track": "val:1",
+  "name": "Circuit de Hautebois",
+  "length": 5520.0,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   86.302,
+   86.615
+  ],
+  "best": 86.302
+ },
+ {
+  "track": "val:2",
+  "name": "Circuit de Rivecourt",
+  "length": 3565.4,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   76.589,
+   77.063
+  ],
+  "best": 76.589
+ },
+ {
+  "track": "val:3",
+  "name": "Circuit de Belmont",
+  "length": 4696.8,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   68.376,
+   68.532
+  ],
+  "best": 68.376
+ },
+ {
+  "track": "val:4",
+  "name": "Circuit de Ardoisesart",
+  "length": 5382.3,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   101.458,
+   101.612
+  ],
+  "best": 101.458
+ }
+]

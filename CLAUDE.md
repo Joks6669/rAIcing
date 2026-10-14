@@ -103,12 +103,13 @@ session principale :
 ### Vérifications faites le 14/10/2026 au soir
 - `pytest -q` : 65 réussis, 0 échec (3 tests du labo corrigés, dont un vrai défaut dans `algos/es.py`).
 - `demo_brains/demo-bc` (imitation du « pro ») : 2 tours sans sortie sur 5/5 circuits de labo et 4/5 de
-  validation, à 0–2 % du « pro ». Critère d'acceptation atteint pour BC ; RL non encore démontré.
+  validation, à 0–2 % du « pro ». Critère d'acceptation atteint pour BC. RL démontré : `demo-ppo` (BC + PPO 4 M) 20/20 circuits
+  de validation, ratio médian 1,011, plus rapide que le « pro » sur 9/20 (`docs/LAB.md`).
 - `docs/DIRECTOR_GUIDE.md` n'existe pas.
 
 ### Prochaines étapes (dans cet ordre)
 1. ~~`pytest -x -q` vert~~ (fait). Relire service.py / app.py contre `docs/LEAGUE.md` et `docs/API.md`.
-2. Laboratoire : vérifier que `run_job` apprend réellement — critère d'acceptation : un pilote qui
+2. ~~Laboratoire : vérifier que `run_job` apprend réellement~~ (fait) — critère d'acceptation : un pilote qui
    boucle 2 tours sans sortie sur ≥ 3/5 circuits de labo non vus et ≥ 3/5 `validation_track(0..4)`,
    temps comparés au « pro ». Mesurer le débit (décisions/s) par méthode.
 3. Web : `npm install && npm run build`, mode mock (`RAICING_MOCK=1`), captures Playwright desktop/mobile

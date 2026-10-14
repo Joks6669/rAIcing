@@ -181,7 +181,8 @@ Modes : `solo`, `race`, `traffic`. Quota compté à la source.
 imitation** du « pro » (1,6 M interactions, ~14 min) boucle 2 tours sans sortie sur **5/5 circuits de
 labo** et **4/5 circuits de validation** (sortie au 2ᵉ tour sur `validation_track(2)`), à **0–2 %** du
 temps du « pro » (sauf val:2). Le critère d'acceptation (≥ 3/5 et ≥ 3/5) est donc atteint pour BC.
-Non démontré : que PPO/SAC/ES **améliorent** ce pilote au-delà du professeur.
+Démontré depuis : l'affinage PPO de ce pilote (`demo_brains/demo-ppo`, 4 M interactions, 6 min) boucle
+20/20 circuits de validation et bat le « pro » sur 9/20 (voir `docs/LAB.md`, « Résultats mesurés »).
 
 ### 5.5 Services, API, worker, CLI (écrits par un sous-agent, testés par sa suite)
 Spécification : `docs/LEAGUE.md` et `docs/API.md`.
@@ -221,9 +222,8 @@ actuel, `docs/DIRECTOR_GUIDE.md` (**n'existe pas**).
 ## 7. Prochaines étapes, dans l'ordre
 
 1. ~~Faire passer les 3 tests du labo~~ (fait le 14/10/2026).
-2. **Prouver que l'apprentissage par renforcement améliore un pilote** : partir de `demo-bc`, affiner en
-   PPO ou SAC (mode `solo` puis `traffic`), comparer au « pro » sur les circuits de validation. Mesurer le
-   débit (décisions/s) par méthode et le documenter dans `docs/LAB.md`.
+2. ~~Prouver que l'apprentissage par renforcement améliore un pilote~~ (fait le 14/10/2026 : `demo-ppo`,
+   20/20 circuits de validation, plus rapide que le « pro » sur 9/20 ; détails et débits dans `docs/LAB.md`).
 3. **Écrire `docs/DIRECTOR_GUIDE.md`** : le document que liront les IA directrices (règles utiles aux
    décisions, observations/actions, format cerveau, garage, labo, toutes les commandes `paddock` avec
    exemples `--json`, déroulé conseillé d'une saison, fair-play).

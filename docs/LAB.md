@@ -83,6 +83,43 @@ Les circuits de validation (`20 000 000 + k`) et de championnat (graines secrèt
 
 La normalisation des observations (moyenne/écart-type courants) est exportée dans `obs_norm` du cerveau.
 
+## Résultats mesurés (14/10/2026, environnement cloud, 4 cœurs, sans GPU)
+
+### L'apprentissage par renforcement améliore le pilote imité
+
+Recette (`scripts/train_demo.py --skip-bc --ppo-steps 4000000`) : PPO part de `demo-bc` (imitation du
+« pro »), mode `solo`, circuits de labo 5..1004, `lr` 5e-5, `log_std_init` −2, 4 itérations
+d'échauffement du critique, statistiques d'observation figées. 4 M interactions, 6 min 23 s.
+Résultat : `demo_brains/demo-ppo`.
+
+Comparaison sur 20 circuits de validation jamais vus (`scripts/compare_pilots.py pro
+demo_brains/demo-bc demo_brains/demo-ppo --tracks 20 --laps 2`, détail dans
+`demo_brains/compare-val20.json`) ; ratio = meilleur tour / meilleur tour du « pro » :
+
+| Pilote | 2 tours sans sortie | Ratio médian | Meilleur | Pire | Plus rapide que « pro » |
+|---|---|---|---|---|---|
+| `pro` (référence scriptée) | 20/20 | 1,000 | — | — | — |
+| `demo-bc` (imitation) | 17/20 | 1,015 | 0,979 | 1,038 | 4/17 |
+| `demo-ppo` (BC + PPO) | 20/20 | 1,011 | 0,941 | 1,117 | 9/20 |
+
+PPO rend le pilote plus fiable (plus aucune sortie) et légèrement plus rapide en médiane, et il dépasse
+le professeur sur près de la moitié des circuits. La dispersion augmente (pire cas 1,117) : sur certains
+circuits le pilote PPO est nettement plus prudent. Au début de l'affinage, le taux de sortie en
+entraînement monte à 100 % (bruit d'exploration sur le braquage) avant de redescendre à 3–7 %.
+
+### Débit par méthode (interactions par seconde, 64 voitures, MLP 256×256)
+
+| Méthode | Débit | Remarque |
+|---|---|---|
+| `ppo` | ~10 500 | mesuré sur 4 M interactions |
+| `es` | ~2 600 | population 64, épisodes de 1 500 décisions |
+| `bc` | ~2 000 | limité par le pilote de référence (Python) qui étiquette |
+| `td3` | ~1 200 | une mise à jour de gradient par pas de l'environnement |
+| `sac` | ~800 | idem, deux critiques et entropie |
+
+PPO est de loin la méthode la plus rentable sur CPU. Les méthodes hors politique (SAC, TD3) sont limitées
+par les mises à jour du réseau, pas par la simulation.
+
 ## Fichiers
 
 * `raicing/lab/envs.py` : `LabVecEnv` (SB3 `VecEnv`), `RaicingEnv` (Gymnasium, 1 voiture), `RaicingParallelEnv` (PettingZoo).
