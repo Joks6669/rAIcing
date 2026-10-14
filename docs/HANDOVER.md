@@ -200,6 +200,16 @@ replay en canvas : interpolation, caméra, classement en direct, télémétrie, 
 construit une ligue plausible à partir de `web/fixtures/`. Captures dans `web/screenshots/` (le site a
 donc été construit au moins une fois). `web/Dockerfile` (standalone).
 
+### 5.7 Replay « retransmission TV » (`web/components/replay/broadcast.ts`)
+Demande de Gabriel : du **spectacle**. Le replay est rendu comme une retransmission : circuit urbain de nuit
+(murs éclairés, vibreurs dans les virages, damier, lampadaires, blocs de ville), monoplaces aux couleurs
+des écuries avec traînées et feux stop (champ `pedal`), étincelles aux contacts, fumée aux abandons, pluie
+à l'écran, piste mouillée et gerbes d'eau. **Caméra « réalisateur »** par défaut : elle suit la bagarre la
+plus serrée en tête, coupe sur les incidents (contact, abandon, dépassement, nouveau leader), plans limités
+en temps réel et en temps de course. Habillage HTML : classement en colonne, compteur de tours, bandeaux
+d'événements, fiche du pilote filmé, **feux de départ** et bouton « Regarder la course ». Les dépassements
+et meilleurs tours sont déduits des images (`buildHighlights`). 60 images/s mesurées en Chromium sans GPU.
+
 ## 6. État des tests (mis à jour le 14/10/2026)
 
 `python -m pytest -q` : **65 réussis, 0 échec** (≈ 35 s). Les 3 échecs précédents de `tests/test_lab.py` :

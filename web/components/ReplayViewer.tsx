@@ -6,18 +6,8 @@ import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore
 import { ReplayModel, STATUS } from "@/lib/replay-model";
 import { fmtClock } from "@/lib/format";
 import type { CompoundSpec } from "@/lib/types";
-import {
-  buildTrackPaths,
-  drawScene,
-  fitCamera,
-  pickCar,
-  readTheme,
-  screenToWorld,
-  DEFAULT_THEME,
-  type Camera,
-  type Theme,
-  type TrackPaths,
-} from "./replay/draw";
+import { fitCamera, pickCar, screenToWorld, type Camera } from "./replay/draw";
+import { buildHighlights, buildScenery, directorCamera, drawBroadcast, newDirector, type Highlight, type Scenery } from "./replay/broadcast";
 import Leaderboard from "./replay/Leaderboard";
 import Telemetry from "./replay/Telemetry";
 import EventsTicker from "./replay/EventsTicker";
@@ -25,7 +15,8 @@ import Timeline from "./replay/Timeline";
 
 const SPEEDS = [1, 2, 5, 10, 30];
 const LIVE_DELAY = 0.45; // s de retard sur la dernière image reçue, pour interpoler
-type CamMode = "overview" | "follow" | "free";
+const LIGHTS_MS = 3600; // séquence des feux de départ (temps réel)
+type CamMode = "tv" | "overview" | "follow" | "free";
 
 export interface ReplayViewerProps {
   model: ReplayModel;
@@ -41,14 +32,15 @@ function shortName(name: string): string {
   return name.slice(0, 3).toUpperCase();
 }
 
-export default function ReplayViewer({ model, live = false, compounds, initialSelected, initialSpeed = 5, autoplay = false }: ReplayViewerProps) {
+export default function ReplayViewer({ model, live = false, compounds, initialSelected, initialSpeed = 2, autoplay = false }: ReplayViewerProps) {
   const subscribe = useCallback((cb: () => void) => model.subscribe(cb), [model]);
   const version = useSyncExternalStore(subscribe, () => model.version, () => model.version);
 
   const [playing, setPlaying] = useState(autoplay || live);
   const [speed, setSpeed] = useState(initialSpeed);
   const [followLive, setFollowLive] = useState(live);
-  const [camMode, setCamMode] = useState<CamMode>("overview");
+  const [camMode, setCamMode] = useState<CamMode>("tv");
+  const [lightsAt, setLightsAt] = useState<number | null>(null);
   const [selected, setSelected] = useState<number | null>(() => {
     if (initialSelected != null) return initialSelected;
     if (!model.frames.length) return null;
@@ -59,17 +51,21 @@ export default function ReplayViewer({ model, live = false, compounds, initialSe
   const [uiT, setUiT] = useState(() => (live ? model.tEnd : model.t0));
 
   const tRef = useRef(live ? model.tEnd : model.t0);
-  const stateRef = useRef({ playing, speed, followLive, camMode, selected });
-  stateRef.current = { playing, speed, followLive, camMode, selected };
+  const stateRef = useRef({ playing, speed, followLive, camMode, selected, lightsAt });
+  stateRef.current = { playing, speed, followLive, camMode, selected, lightsAt };
 
   const wrapRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const sizeRef = useRef({ w: 800, h: 520, dpr: 1 });
   const camRef = useRef<Camera>({ cx: 0, cy: 0, scale: 1 });
-  const followScaleRef = useRef(3.2);
-  const themeRef = useRef<Theme>(DEFAULT_THEME);
+  const followScaleRef = useRef(4);
   const visibleRef = useRef<{ x: number; y: number; car: number }[]>([]);
-  const pathsRef = useRef<TrackPaths | null>(null);
+  const sceneRef = useRef<Scenery | null>(null);
+  const directorRef = useRef(newDirector());
+  const dtRealRef = useRef(0.016);
+  const highlights = useMemo<Highlight[]>(() => buildHighlights(model), [model, version]);
+  const highlightsRef = useRef(highlights);
+  highlightsRef.current = highlights;
 
   const cars = model.header.cars;
   const colors = useMemo(() => cars.map((c) => c.color || "#888"), [cars]);
@@ -85,12 +81,15 @@ export default function ReplayViewer({ model, live = false, compounds, initialSe
     if (!canvas || !model.frames.length) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    if (!pathsRef.current) pathsRef.current = buildTrackPaths(model.geom, model.anyWet);
+    if (!sceneRef.current) sceneRef.current = buildScenery(model.geom, model.anyWet);
     const { w, h, dpr } = sizeRef.current;
     const st = stateRef.current;
     const t = tRef.current;
+    const now = performance.now();
     let cam: Camera;
-    if (st.camMode === "overview") {
+    if (st.camMode === "tv") {
+      cam = directorCamera(directorRef.current, model, t, now, w, h, highlightsRef.current, null, dtRealRef.current) ?? fitCamera(model.geom, w, h, 24, 20);
+    } else if (st.camMode === "overview") {
       cam = fitCamera(model.geom, w, h, w < 500 ? 12 : 24, w < 500 ? 34 : 20);
     } else if (st.camMode === "follow" && st.selected != null) {
       const p = model.pose(st.selected, t);
@@ -99,9 +98,10 @@ export default function ReplayViewer({ model, live = false, compounds, initialSe
       cam = camRef.current;
     }
     camRef.current = cam;
-    visibleRef.current = drawScene({
-      ctx, w, h, dpr, cam, model, paths: pathsRef.current, theme: themeRef.current, t,
-      selected: st.selected, shortNames, colors, teammateIndex,
+    const focus = st.camMode === "tv" ? directorRef.current.target : st.selected;
+    visibleRef.current = drawBroadcast({
+      ctx, w, h, dpr, cam, model, scene: sceneRef.current, t, now,
+      selected: st.camMode === "tv" ? null : st.selected, focus, shortNames, colors, teammateIndex,
     });
   }, [model, shortNames, colors, teammateIndex]);
 
@@ -124,18 +124,6 @@ export default function ReplayViewer({ model, live = false, compounds, initialSe
     return () => ro.disconnect();
   }, [draw]);
 
-  // thème (couleurs lues sur les variables CSS)
-  useEffect(() => {
-    const update = () => {
-      if (wrapRef.current) themeRef.current = readTheme(wrapRef.current);
-      draw();
-    };
-    update();
-    const mq = window.matchMedia("(prefers-color-scheme: light)");
-    mq.addEventListener("change", update);
-    return () => mq.removeEventListener("change", update);
-  }, [draw]);
-
   // boucle d'animation
   useEffect(() => {
     let raf = 0;
@@ -144,8 +132,15 @@ export default function ReplayViewer({ model, live = false, compounds, initialSe
     const loop = (now: number) => {
       const dtReal = Math.min(0.1, (now - last) / 1000);
       last = now;
+      dtRealRef.current = dtReal;
       const st = stateRef.current;
-      if (live && st.followLive) {
+      if (st.lightsAt != null) {
+        // feux de départ : le temps de course reste figé jusqu'à l'extinction
+        if (now - st.lightsAt >= LIGHTS_MS) {
+          stateRef.current.lightsAt = null;
+          setLightsAt(null);
+        }
+      } else if (live && st.followLive) {
         const edge = model.tEnd - LIVE_DELAY;
         let t = tRef.current + dtReal;
         if (t > model.tEnd) t = model.tEnd;
@@ -175,7 +170,8 @@ export default function ReplayViewer({ model, live = false, compounds, initialSe
 
   // nouveau modèle (direct) : nouvelle géométrie
   useEffect(() => {
-    pathsRef.current = null;
+    sceneRef.current = null;
+    directorRef.current = newDirector();
   }, [model]);
 
   // sélection par défaut quand les premières images arrivent en direct
@@ -199,6 +195,11 @@ export default function ReplayViewer({ model, live = false, compounds, initialSe
 
   const togglePlay = useCallback(() => {
     if (!live && !playing && tRef.current >= model.tEnd - 0.01) seek(model.t0);
+    if (!live && !playing && model.header.kind !== "quali" && tRef.current <= model.t0 + 0.05) {
+      const now = performance.now();
+      stateRef.current.lightsAt = now;
+      setLightsAt(now);
+    }
     setPlaying((p) => !p);
     if (live && playing) setFollowLive(false);
   }, [live, playing, model, seek]);
@@ -249,7 +250,7 @@ export default function ReplayViewer({ model, live = false, compounds, initialSe
   // glisser pour déplacer, cliquer pour sélectionner
   const dragRef = useRef<{ x: number; y: number; moved: boolean; id: number } | null>(null);
   const onPointerDown = (e: React.PointerEvent<HTMLCanvasElement>) => {
-    if (e.pointerType === "touch" && stateRef.current.camMode === "overview") {
+    if (e.pointerType === "touch" && (stateRef.current.camMode === "overview" || stateRef.current.camMode === "tv")) {
       dragRef.current = { x: e.clientX, y: e.clientY, moved: false, id: -1 };
       return;
     }
@@ -282,7 +283,7 @@ export default function ReplayViewer({ model, live = false, compounds, initialSe
     const r = e.currentTarget.getBoundingClientRect();
     const { w, h } = sizeRef.current;
     const c = pickCar(visibleRef.current, camRef.current, w, h, e.clientX - r.left, e.clientY - r.top, e.pointerType === "touch" ? 26 : 18);
-    if (c != null) setSelected(c);
+    if (c != null) selectCar(c);
   };
 
   const onKeyDown = (e: React.KeyboardEvent) => {
@@ -303,6 +304,17 @@ export default function ReplayViewer({ model, live = false, compounds, initialSe
   const hasFrames = model.frames.length > 0;
   const atLiveEdge = live && followLive;
   const sessionLabel = model.header.kind === "quali" ? "Qualifications" : "Course";
+  const focusCar = camMode === "tv" ? directorRef.current.target : selected;
+  const focusRow = focusCar != null ? rows.find((r) => r.car === focusCar) ?? null : null;
+  const banner = useMemo(() => {
+    let b: Highlight | null = null;
+    for (const hl of highlights) {
+      if (hl.t > uiT) break;
+      if (uiT - hl.t < 3.6) b = hl;
+    }
+    return b;
+  }, [highlights, uiT]);
+  const rainNow = useMemo(() => model.wetnessAt(uiT)?.rain ?? 0, [model, uiT]);
 
   let lapText: string;
   if (model.header.kind === "quali") lapText = "Tour chronométré";
@@ -311,7 +323,7 @@ export default function ReplayViewer({ model, live = false, compounds, initialSe
   else lapText = `Tour ${lapInfo.lap} / ${lapInfo.total}`;
 
   return (
-    <section className="viewer" aria-label={`Replay — ${sessionLabel}`} onKeyDown={onKeyDown}>
+    <section className="viewer viewer-tv" aria-label={`Replay — ${sessionLabel}`} onKeyDown={onKeyDown}>
       <div className="viewer-main">
         <div className="viewer-stage">
           <div className="viewer-canvas" ref={wrapRef}>
@@ -323,19 +335,53 @@ export default function ReplayViewer({ model, live = false, compounds, initialSe
               onPointerMove={onPointerMove}
               onPointerUp={onPointerUp}
               onPointerCancel={() => (dragRef.current = null)}
-              className={camMode === "overview" ? "" : "grabbable"}
+              className={camMode === "overview" || camMode === "tv" ? "" : "grabbable"}
             />
             {!hasFrames ? <div className="viewer-overlay">En attente des premières images…</div> : null}
-            <div className="viewer-hud">
-              <span className="hud-lap">{lapText}</span>
-              <span className="hud-time">{fmtClock(uiT)}</span>
-              {live ? <span className={atLiveEdge ? "hud-live on" : "hud-live"}>{atLiveEdge ? "EN DIRECT" : "EN DIFFÉRÉ"}</span> : null}
+            <TvTower model={model} rows={rows} colors={colors} shortNames={shortNames} focus={focusCar} onSelect={(c) => selectCar(c)} />
+            <div className="tv-lapbox">
+              <div className="tv-lapbox-main">
+                <span className="tv-lapbox-label">{model.header.kind === "quali" ? "QUALIFS" : lapInfo.phase === "race" ? "TOUR" : lapInfo.phase === "finish" ? "ARRIVÉE" : "GRILLE"}</span>
+                {model.header.kind !== "quali" && lapInfo.phase === "race" ? (
+                  <span className="tv-lapbox-lap tabular">{lapInfo.lap}<small>/{lapInfo.total}</small></span>
+                ) : null}
+              </div>
+              <div className="tv-lapbox-sub tabular">
+                {fmtClock(uiT)}
+                {rainNow > 0.05 ? <span className="tv-rain" title="Pluie">PLUIE</span> : null}
+                {live ? <span className={atLiveEdge ? "hud-live on" : "hud-live"}>{atLiveEdge ? "DIRECT" : "DIFFÉRÉ"}</span> : null}
+              </div>
             </div>
-            <div className="viewer-legend" aria-hidden>
-              <span><i className="lg-edge" />Rebord (mur)</span>
-              <span><i className="lg-pit" />Voie des stands</span>
-              <span><i className="lg-car2" />Voiture n° 2</span>
-            </div>
+            {banner ? (
+              <div key={`${banner.t}-${banner.kind}`} className={`tv-banner tv-${banner.kind}`} role="status">
+                <span className="tv-banner-title">{banner.title}</span>
+                <span className="tv-banner-text">{banner.text}</span>
+              </div>
+            ) : null}
+            {focusRow ? (
+              <div className="tv-card" style={{ ["--team" as string]: colors[focusRow.car] }}>
+                <span className="tv-card-pos tabular">{focusRow.status >= 3 ? "—" : `P${focusRow.pos + 1}`}</span>
+                <span className="tv-card-name">
+                  <b>{cars[focusRow.car].driver}</b>
+                  <small>{cars[focusRow.car].team}</small>
+                </span>
+                <span className="tv-card-speed tabular">
+                  {focusRow.status === STATUS.pit ? "STANDS" : Math.round(focusRow.speed * 3.6)}
+                  {focusRow.status === STATUS.pit ? null : <small>km/h</small>}
+                </span>
+                <span className={`tv-card-tyre tyre-${model.header.compounds[focusRow.compound] ?? "medium"}`}>
+                  {(model.header.compounds[focusRow.compound] ?? "?").slice(0, 1).toUpperCase()}
+                  <small className="tabular">{Math.round(focusRow.wear * 100)} %</small>
+                </span>
+              </div>
+            ) : null}
+            {lightsAt != null ? <StartLights at={lightsAt} /> : null}
+            {!playing && !live && hasFrames && uiT <= model.t0 + 0.05 ? (
+              <button type="button" className="tv-start" onClick={togglePlay}>
+                <PlayIcon />
+                <span>{model.header.kind === "quali" ? "Regarder les qualifications" : "Regarder la course"}</span>
+              </button>
+            ) : null}
             <div className="viewer-zoom">
               <button type="button" onClick={() => zoomBy(1.35)} aria-label="Zoomer">+</button>
               <button type="button" onClick={() => zoomBy(1 / 1.35)} aria-label="Dézoomer">−</button>
@@ -364,6 +410,9 @@ export default function ReplayViewer({ model, live = false, compounds, initialSe
               </div>
             )}
             <div className="seg" role="group" aria-label="Caméra">
+              <button type="button" className={camMode === "tv" ? "is-active" : ""} aria-pressed={camMode === "tv"} onClick={() => setCamMode("tv")}>
+                Réalisation TV
+              </button>
               <button type="button" className={camMode === "overview" ? "is-active" : ""} aria-pressed={camMode === "overview"} onClick={() => setCamMode("overview")}>
                 Vue d&apos;ensemble
               </button>
@@ -381,14 +430,66 @@ export default function ReplayViewer({ model, live = false, compounds, initialSe
           <Timeline model={model} t={uiT} version={version} onSeek={seek} />
         </div>
 
-        <Leaderboard model={model} rows={rows} selected={selected} onSelect={(c) => selectCar(c)} lapText={lapText} />
       </div>
 
       <div className="viewer-bottom">
+        <Leaderboard model={model} rows={rows} selected={selected} onSelect={(c) => selectCar(c)} lapText={lapText} />
         <Telemetry model={model} car={selected} t={uiT} version={version} compounds={compounds} />
         <EventsTicker model={model} t={uiT} version={version} onSeek={seek} onSelect={(c) => selectCar(c, false)} />
       </div>
     </section>
+  );
+}
+
+function TvTower({ model, rows, colors, shortNames, focus, onSelect }: {
+  model: ReplayModel; rows: ReturnType<ReplayModel["rowsAt"]>; colors: string[]; shortNames: string[]; focus: number | null; onSelect: (c: number) => void;
+}) {
+  const sorted = [...rows].sort((a, b) => a.pos - b.pos);
+  if (!sorted.length) return null;
+  return (
+    <ol className="tv-tower" aria-label="Classement en direct">
+      {sorted.map((r) => {
+        const out = r.status === STATUS.dnf || r.status === STATUS.dsq;
+        const gap = out ? (r.status === STATUS.dsq ? "DSQ" : "OUT") : r.status === STATUS.pit ? "STANDS" : r.pos === 0 ? (r.finished ? "VAINQ." : "TÊTE") : r.gapText.replace("\u00a0s", "").replace(" tours", "T").replace(" tour", "T");
+        return (
+          <li key={r.car} className={`${out ? "is-out" : ""} ${r.car === focus ? "is-focus" : ""}`}>
+            <button type="button" onClick={() => onSelect(r.car)} title={model.header.cars[r.car].driver}>
+              <span className="tv-pos tabular">{r.pos + 1}</span>
+              <span className="tv-bar" style={{ background: colors[r.car] }} />
+              <span className="tv-name">{shortNames[r.car]}</span>
+              <span className="tv-gap tabular">{gap}</span>
+            </button>
+          </li>
+        );
+      })}
+    </ol>
+  );
+}
+
+function StartLights({ at }: { at: number }) {
+  const [now, setNow] = useState(() => performance.now());
+  useEffect(() => {
+    let raf = 0;
+    const tick = () => {
+      setNow(performance.now());
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, []);
+  const el = now - at;
+  const on = Math.min(5, Math.floor(el / 600) + 1);
+  const out = el >= 3300;
+  return (
+    <div className={`tv-lights ${out ? "is-out" : ""}`} aria-hidden>
+      {[0, 1, 2, 3, 4].map((i) => (
+        <span key={i} className={!out && i < on ? "on" : ""}>
+          <i />
+          <i />
+        </span>
+      ))}
+      {out ? <b>C&apos;EST PARTI !</b> : null}
+    </div>
   );
 }
 
