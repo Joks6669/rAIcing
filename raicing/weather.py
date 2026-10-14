@@ -60,7 +60,7 @@ def generate_weather(seed: int, duration: float, rules: WeatherRules | None = No
         if start > duration:
             break
         ramp = float(rng.uniform(40, 150))
-        hold = float(rng.uniform(60, 0.4 * duration))
+        hold = float(rng.uniform(60, max(60.0, 0.4 * duration)))   # short sessions: high >= low
         level = float(rng.uniform(0.25, 1.0))
         times += [start, start + ramp, start + ramp + hold, start + 2 * ramp + hold]
         rain += [0.0, level, level * rng.uniform(0.6, 1.0), 0.0]

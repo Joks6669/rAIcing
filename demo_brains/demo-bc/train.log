@@ -1,0 +1,9 @@
+[     0.0s] job bc budget 1600000 config 8a6296bde9d245e6
+[    44.4s] bc it 0 beta 1.000 steps 200000 samples 200000 loss 0.00446 t 43s
+[   170.0s] bc it 1 beta 0.500 steps 400000 samples 400000 loss 0.00745 t 169s
+[   240.9s] bc it 2 beta 0.250 steps 600000 samples 600000 loss 0.00924 t 240s
+[   311.7s] bc it 3 beta 0.125 steps 800000 samples 800000 loss 0.00895 t 310s
+[   551.3s] bc it 4 beta 0.062 steps 1000000 samples 1000000 loss 0.00876 t 550s
+[   636.7s] bc it 5 beta 0.000 steps 1200000 samples 1200000 loss 0.00868 t 635s
+[   719.2s] bc it 6 beta 0.000 steps 1400000 samples 1400000 loss 0.00803 t 718s
+[   801.3s] bc it 7 beta 0.000 steps 1600000 samples 1500000 loss 0.00810 t 800s

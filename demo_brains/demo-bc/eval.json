@@ -1,0 +1,131 @@
+[
+ {
+  "track": "lab:0",
+  "name": "Circuit de Saintfort",
+  "length": 5025.3,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   84.876,
+   84.223
+  ],
+  "best": 84.223
+ },
+ {
+  "track": "lab:1",
+  "name": "Circuit de Vertmare",
+  "length": 3983.2,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   68.889,
+   68.448
+  ],
+  "best": 68.448
+ },
+ {
+  "track": "lab:2",
+  "name": "Circuit de Montfontaine",
+  "length": 3364.7,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   59.358,
+   58.744
+  ],
+  "best": 58.744
+ },
+ {
+  "track": "lab:3",
+  "name": "Circuit de Lunecombe",
+  "length": 4142.0,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   52.445,
+   51.933
+  ],
+  "best": 51.933
+ },
+ {
+  "track": "lab:4",
+  "name": "Circuit de Belhaye",
+  "length": 5473.4,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   95.91,
+   94.783
+  ],
+  "best": 94.783
+ },
+ {
+  "track": "val:0",
+  "name": "Circuit de Rivecombe",
+  "length": 4890.2,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   82.816,
+   82.282
+  ],
+  "best": 82.282
+ },
+ {
+  "track": "val:1",
+  "name": "Circuit de Hautebois",
+  "length": 5520.0,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   86.539,
+   85.884
+  ],
+  "best": 85.884
+ },
+ {
+  "track": "val:2",
+  "name": "Circuit de Rivecourt",
+  "length": 3565.4,
+  "laps": 1,
+  "crashed": true,
+  "reason": "wall",
+  "lap_times": [
+   83.582
+  ],
+  "best": 83.582
+ },
+ {
+  "track": "val:3",
+  "name": "Circuit de Belmont",
+  "length": 4696.8,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   68.719,
+   67.84
+  ],
+  "best": 67.84
+ },
+ {
+  "track": "val:4",
+  "name": "Circuit de Ardoisesart",
+  "length": 5382.3,
+  "laps": 2,
+  "crashed": false,
+  "reason": "",
+  "lap_times": [
+   104.955,
+   104.679
+  ],
+  "best": 104.679
+ }
+]

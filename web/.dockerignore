@@ -1,0 +1,7 @@
+node_modules
+.next
+out
+screenshots
+*.tsbuildinfo
+npm-debug.log*
+.env*.local

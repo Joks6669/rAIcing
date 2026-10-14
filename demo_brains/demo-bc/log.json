@@ -1,0 +1,140 @@
+{
+ "log": {
+  "curve": [
+   {
+    "iteration": 0,
+    "beta": 1.0,
+    "steps": 200000,
+    "samples": 200000,
+    "loss": 0.00446,
+    "mean_reward": -1.986,
+    "crashes": 0,
+    "time": 43.2
+   },
+   {
+    "iteration": 1,
+    "beta": 0.5,
+    "steps": 400000,
+    "samples": 400000,
+    "loss": 0.007445,
+    "mean_reward": 1.605,
+    "crashes": 9,
+    "time": 168.7
+   },
+   {
+    "iteration": 2,
+    "beta": 0.25,
+    "steps": 600000,
+    "samples": 600000,
+    "loss": 0.009239,
+    "mean_reward": -5.365,
+    "crashes": 96,
+    "time": 239.7
+   },
+   {
+    "iteration": 3,
+    "beta": 0.125,
+    "steps": 800000,
+    "samples": 800000,
+    "loss": 0.008947,
+    "mean_reward": -0.21,
+    "crashes": 48,
+    "time": 310.4
+   },
+   {
+    "iteration": 4,
+    "beta": 0.062,
+    "steps": 1000000,
+    "samples": 1000000,
+    "loss": 0.008759,
+    "mean_reward": 3.38,
+    "crashes": 73,
+    "time": 550.0
+   },
+   {
+    "iteration": 5,
+    "beta": 0.0,
+    "steps": 1200000,
+    "samples": 1200000,
+    "loss": 0.008682,
+    "mean_reward": 5.234,
+    "crashes": 30,
+    "time": 635.5
+   },
+   {
+    "iteration": 6,
+    "beta": 0.0,
+    "steps": 1400000,
+    "samples": 1400000,
+    "loss": 0.00803,
+    "mean_reward": 4.169,
+    "crashes": 13,
+    "time": 718.0
+   },
+   {
+    "iteration": 7,
+    "beta": 0.0,
+    "steps": 1600000,
+    "samples": 1500000,
+    "loss": 0.008095,
+    "mean_reward": 2.309,
+    "crashes": 28,
+    "time": 800.1
+   }
+  ],
+  "hyperparams": {
+   "teacher": "pro",
+   "dagger": true,
+   "iterations": 8,
+   "beta_decay": 0.5,
+   "epochs": 4,
+   "lr": 0.001,
+   "lr_final": 0.0002,
+   "batch_size": 2048,
+   "weight_decay": 0.0,
+   "max_samples": 1500000,
+   "eval_every": 0
+  },
+  "envs": 64,
+  "duration": 801.3,
+  "steps_used": 1600000,
+  "throughput": 1996.7
+ },
+ "eval": {
+  "tracks": [
+   {
+    "lap_times": [
+     84.876,
+     84.223
+    ],
+    "crashed": false,
+    "reason": "",
+    "wear": 0.154,
+    "best": 84.223,
+    "track": "lab:0",
+    "name": "Circuit de Saintfort",
+    "pro_best": 84.835,
+    "laps_done": 2,
+    "ratio_to_pro": 0.9928
+   },
+   {
+    "lap_times": [
+     68.889,
+     68.448
+    ],
+    "crashed": false,
+    "reason": "",
+    "wear": 0.114,
+    "best": 68.448,
+    "track": "lab:1",
+    "name": "Circuit de Vertmare",
+    "pro_best": 65.663,
+    "laps_done": 2,
+    "ratio_to_pro": 1.0424
+   }
+  ],
+  "laps": 2,
+  "completed": 2,
+  "crashes": 0
+ }
+}

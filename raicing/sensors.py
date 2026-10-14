@@ -127,7 +127,7 @@ def observe(w: World, cars: np.ndarray | None = None) -> np.ndarray:
         dist = np.where(valid, np.abs(ds_all), np.inf)
         near = np.argsort(dist, axis=1)[:, :N_OPP]
         cvx, cvy = vx * c - vy * s, vx * s + vy * c                    # world velocity of observer
-        for slot in range(N_OPP):
+        for slot in range(near.shape[1]):   # fewer than N_OPP columns when w.n <= N_OPP
             j = near[:, slot]
             ok = np.isfinite(dist[np.arange(m), j])
             if not ok.any():

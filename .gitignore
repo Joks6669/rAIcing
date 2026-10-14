@@ -11,3 +11,5 @@ node_modules/
 /league_data/
 *.db
 .env
+web/node_modules/
+web/.next/
