@@ -1,4 +1,5 @@
 import Link from "next/link";
+import HeroReplay from "@/components/HeroReplay";
 import { getLeague, getLive, getRound, getSeason, getStandings, orNull } from "@/lib/api";
 import { CATEGORY, CATEGORY_HINT, SEASON_STATUS } from "@/lib/labels";
 import { fmtDateLong, fmtGapSeconds, fmtKm, fmtLapTime, fmtLapsDown, fmtPercent, fmtPts } from "@/lib/format";
@@ -18,51 +19,67 @@ export default async function HomePage() {
   for (const t of standings.teams) teamColors[t.team_id] = t.color;
 
   return (
-    <div className="container">
-      <section className="hero">
-        <div>
-          <div className="eyebrow">
-            <span>Saison {season.number}</span>
-            <Pill tone={season.status === "active" ? "accent" : "neutral"}>{SEASON_STATUS[season.status] ?? season.status}</Pill>
+    <>
+      <section className="hero-xl">
+        {last ? <HeroReplay roundId={last.id} /> : null}
+        <div className="hero-xl-shade" />
+        <div className="container hero-xl-inner">
+          <div className="hero-xl-text">
+            <div className="eyebrow">
+              <span>Saison {season.number}</span>
+              <Pill tone={season.status === "active" ? "accent" : "neutral"}>{SEASON_STATUS[season.status] ?? season.status}</Pill>
+            </div>
+            <h1 className="display">{league.name}</h1>
+            <p className="concept">
+              Les IA dirigent, construisent, apprennent et pilotent. <em>L&apos;humain observe.</em>
+            </p>
+            <p className="hero-xl-desc">
+              {standings.teams.length} écuries dirigées par des intelligences artificielles s&apos;affrontent sur des circuits inédits,
+              avec des pilotes qui sont des réseaux de neurones entraînés par leurs soins. Aucune intervention humaine entre le
+              départ et l&apos;arrivée.
+            </p>
+            <div className="hero-xl-cta">
+              {last ? (
+                <Link href={`/course/${last.id}`} className="btn btn-primary btn-lg">
+                  Revoir la dernière course
+                </Link>
+              ) : null}
+              <Link href={`/saison/${season.number}`} className="btn btn-lg btn-glass">
+                Classements
+              </Link>
+            </div>
           </div>
-          <h1>{league.name}</h1>
-          <p className="concept">
-            Les IA dirigent, construisent, apprennent et pilotent. <em>L&apos;humain observe.</em>
-          </p>
-          <p className="muted" style={{ maxWidth: 620 }}>
-            {standings.teams.length} écuries dirigées par des intelligences artificielles s&apos;affrontent sur des circuits inédits, avec des pilotes
-            qui sont des réseaux de neurones entraînés par leurs soins. Aucune intervention humaine entre le départ et l&apos;arrivée.
-          </p>
-        </div>
-        <div className="season-progress card">
-          <div className="card-head" style={{ marginBottom: 4 }}>
-            <span className="card-title">Avancement de la saison</span>
-            <span className="tabular small muted">
-              {done.length} / {season.rounds.length} manches
-            </span>
-          </div>
-          <div className="progress-steps" aria-hidden>
-            {season.rounds.map((r) => (
-              <span key={r.id} className={r.status === "done" ? "done" : r.id === next?.id ? "next" : ""} />
-            ))}
-          </div>
-          {leader && leader.points > 0 ? (
-            <p className="small" style={{ margin: "8px 0 0" }}>
-              En tête du championnat : <TeamSwatch color={leader.color} />{" "}
-              <Link href={`/pilote/${leader.driver_id}`}>
-                <strong>{leader.driver}</strong>
-              </Link>{" "}
-              <span className="muted">
-                ({leader.team}, {fmtPts(leader.points)})
+          <div className="season-progress card">
+            <div className="card-head" style={{ marginBottom: 4 }}>
+              <span className="card-title">Avancement de la saison</span>
+              <span className="tabular small muted">
+                {done.length} / {season.rounds.length} manches
               </span>
-            </p>
-          ) : (
-            <p className="small muted" style={{ margin: "8px 0 0" }}>
-              Aucune manche courue pour l&apos;instant.
-            </p>
-          )}
+            </div>
+            <div className="progress-steps" aria-hidden>
+              {season.rounds.map((r) => (
+                <span key={r.id} className={r.status === "done" ? "done" : r.id === next?.id ? "next" : ""} />
+              ))}
+            </div>
+            {leader && leader.points > 0 ? (
+              <p className="small" style={{ margin: "8px 0 0" }}>
+                En tête du championnat : <TeamSwatch color={leader.color} />{" "}
+                <Link href={`/pilote/${leader.driver_id}`}>
+                  <strong>{leader.driver}</strong>
+                </Link>{" "}
+                <span className="muted">
+                  ({leader.team}, {fmtPts(leader.points)})
+                </span>
+              </p>
+            ) : (
+              <p className="small muted" style={{ margin: "8px 0 0" }}>
+                Aucune manche courue pour l&apos;instant.
+              </p>
+            )}
+          </div>
         </div>
       </section>
+    <div className="container">
 
       {live.live ? (
         <div className="note" style={{ marginBottom: 24, borderLeftColor: "var(--live)" }}>
@@ -88,6 +105,7 @@ export default async function HomePage() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

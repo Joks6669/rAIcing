@@ -210,6 +210,11 @@ en temps réel et en temps de course. Habillage HTML : classement en colonne, co
 d'événements, fiche du pilote filmé, **feux de départ** et bouton « Regarder la course ». Les dépassements
 et meilleurs tours sont déduits des images (`buildHighlights`). 60 images/s mesurées en Chromium sans GPU.
 
+Le reste du site suit la même ambiance : thème sombre unique (plus de thème clair), titres en Barlow
+Condensed italique (auto-hébergée, `web/app/fonts/`, licence OFL), cartes à liseré vert/rouge, podiums
+et positions marqués, et sur l'accueil un grand bandeau où la dernière course tourne en fond
+(`web/components/HeroReplay.tsx`, image fixe si l'utilisateur réduit les animations).
+
 ## 6. État des tests (mis à jour le 14/10/2026)
 
 `python -m pytest -q` : **65 réussis, 0 échec** (≈ 35 s). Les 3 échecs précédents de `tests/test_lab.py` :

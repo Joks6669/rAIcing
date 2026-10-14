@@ -14,6 +14,18 @@ const inter = localFont({
   display: "swap",
 });
 
+// Barlow Condensed (licence SIL OFL, voir app/fonts/LICENSE-BarlowCondensed.txt) : titres façon sport automobile.
+const barlow = localFont({
+  src: [
+    { path: "./fonts/barlow-condensed-latin-600-normal.woff2", weight: "600", style: "normal" },
+    { path: "./fonts/barlow-condensed-latin-700-normal.woff2", weight: "700", style: "normal" },
+    { path: "./fonts/barlow-condensed-latin-700-italic.woff2", weight: "700", style: "italic" },
+    { path: "./fonts/barlow-condensed-latin-800-italic.woff2", weight: "800", style: "italic" },
+  ],
+  variable: "--font-barlow",
+  display: "swap",
+});
+
 // Données vivantes : rendu à la requête (les appels à l'API sont mis en cache quelques secondes).
 export const dynamic = "force-dynamic";
 
@@ -27,10 +39,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#0c0f14" },
-    { media: "(prefers-color-scheme: light)", color: "#f5f6f8" },
-  ],
+  themeColor: "#07090d",
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
@@ -40,7 +49,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   ]);
   const seasonHref = `/saison/${league?.current_season ?? 1}`;
   return (
-    <html lang="fr" className={inter.variable}>
+    <html lang="fr" className={`${inter.variable} ${barlow.variable}`}>
       <body>
         <a href="#contenu" className="visually-hidden">
           Aller au contenu
