@@ -247,8 +247,8 @@ Non vérifié par la session principale : relecture de `service.py` (83 Ko) cont
    voiture aux stands dans le replay. Captures à jour dans `web/screenshots/`.
 5. ~~Équilibrage~~ (fait le 14/10/2026, voir `docs/BALANCE.md`) : stratégies 0/1/2 arrêts toutes viables ;
    refroidissement corrigé (élargit la fenêtre de température au lieu de surrefroidir) ; sorties en peloton
-   des pilotes de référence réduites ; coéquipiers système départagés. **Restent à trancher par Gabriel** :
-   la pièce « freins » (inutile physiquement) et le niveau d'attrition (~30 %).
+   des pilotes de référence réduites ; coéquipiers système départagés. Freins transformés en
+   anti-blocage et attrition (~30 %) acceptée, sur décision de Gabriel.
 6. **Saison de démonstration** : ligue locale (`stewards init`), écuries système + 1–2 écuries avec des
    cerveaux entraînés, 10 manches, puis publication d'un aperçu.
 7. **Déploiement** : `docker-compose` (postgres, api, worker, web), CI GitHub Actions (pytest + build web).

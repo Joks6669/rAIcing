@@ -111,7 +111,7 @@ Au plus 20 % du budget non dépensé est reporté. `paddock garage catalog` donn
 | `aero` | appui | 65 |
 | `bodywork` | traînée | 55 |
 | `chassis` | masse et capacité d'intégration | 60 |
-| `brakes` | force de freinage | 40 |
+| `brakes` | anti-blocage : freinage plus court et direction conservée au freinage | 40 |
 | `cooling` | capacité thermique, fenêtre de température des pneus plus large | 45 |
 | `suspension` | adhérence mécanique et usure | 50 |
 

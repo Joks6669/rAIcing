@@ -13,7 +13,7 @@ SPEC_FIELDS = (
     "mass", "iz", "lf", "lr", "h", "tw", "length", "width", "power", "max_drive", "max_brake",
     "brake_front", "cda", "cla", "aero_front", "roll_res", "max_steer", "steer_rate", "pedal_rate",
     "mu", "load_sens", "fz_nom", "pac_b", "pac_c", "heat_cap", "heat_gain", "cool_base",
-    "cool_speed", "roll_heat", "wear_mult", "rear_grip", "rear_b",
+    "cool_speed", "roll_heat", "wear_mult", "rear_grip", "rear_b", "abs",
 )
 
 
@@ -84,6 +84,7 @@ class CarSpec:
     rear_grip: float = 1.12
     rear_b: float = 1.15
     tyre_window: float = 1.0   # multiplier of every compound's optimal temperature window width
+    abs: float = 0.0           # anti-lock brakes quality 0..1 (brakes part)
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -134,4 +135,6 @@ def build_spec(regs: Regulations | None = None, mods: PerformanceModifiers | Non
         # the cooling part keeps the tyres in their window (wider window, hot or cold): cooling them
         # harder would push them below their window in normal conditions and only cost grip
         tyre_window=mods.cooling,
+        # the brakes part: braking is tyre-limited, so better brakes mean anti-lock (see kernels)
+        abs=float(min(max((mods.brake - 1.0) / 0.25, 0.0), 1.0)),
     )

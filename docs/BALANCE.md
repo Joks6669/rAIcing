@@ -58,9 +58,14 @@ télémétrie pneumatique ≈ 0 sur un tour (son effet, −5 % d'usure, joue sur
   de leur fenêtre de température en conditions normales (−0,66 % au niveau 7). Elle élargit désormais
   la fenêtre de température optimale de chaque gomme (+14 % au maximum) : utile si les pneus sont trop
   chauds ou trop froids, jamais pénalisante. Sa valeur principale reste la capacité thermique (moteur).
-- **Freins, à décider** : au freinage maximal, les roues bloquent et l'adhérence du pneu limite la
-  décélération, quelle que soit la force des freins. Distance 288 → 108 km/h : 94,4 m au niveau 0,
-  93,2 m au niveau 7. La pièce ne sert pratiquement à rien. Voir « Questions ouvertes ».
+- **Freins, corrigé (option « anti-blocage » validée par Gabriel)** : au freinage maximal les roues
+  bloquaient et l'adhérence du pneu limitait la décélération quelle que soit la force des freins
+  (288 → 108 km/h : 94,4 m au niveau 0, 93,2 m au niveau 7). La pièce donne désormais un anti-blocage
+  (paramètre `abs` 0–1, colonne du moteur physique) : à la limite du blocage, la roue garde jusqu'à
+  100 % de la force maximale du pneu (95 % sans) et jusqu'à 50 % d'adhérence latérale en plus pour
+  diriger la voiture. Distance de freinage : 94,4 m (niv. 0), 91,1 m (niv. 3), 90,4 m (niv. 7). La voiture
+  de base (abs = 0) est strictement inchangée. Le gain en direction au freinage profite aux pilotes
+  entraînés ; le pilote de référence ne l'exploite pas.
 
 ## 3. Courses à 16 voitures
 
@@ -95,13 +100,8 @@ le moteur étant déterministe, ils signaient exactement le même temps en quali
 roule désormais avec un réglage légèrement différent (aileron 0,42, répartition de freinage 0,56) :
 écarts de 0,05 à 0,2 s entre coéquipiers.
 
-## 5. Questions ouvertes (décision de Gabriel)
+## 5. Décisions de Gabriel (14/10/2026)
 
-1. **Freins.** Trois options :
-   - (a) *recommandée* : un effet « anti-blocage » — la pièce garde plus de direction au freinage et
-     rapproche la décélération du maximum du pneu. Utile en entrée de virage, ne change pas la voiture de base ;
-   - (b) baisser la force de freinage de base pour que les freins limitent à haute vitesse (change la
-     voiture de base et tout l'étalonnage, à refaire) ;
-   - (c) remplacer la pièce par autre chose.
-2. **Attrition** : ~30 % d'abandons (disqualifications comprises) avec les pilotes de référence. Acceptable
-   pour le spectacle ? Sinon, chantier dédié sur le dépassement des pilotes de référence.
+1. **Freins** : option anti-blocage retenue et implémentée (voir § 2).
+2. **Attrition** (~30 % d'abandons avec les pilotes de référence, disqualifications comprises) : acceptée
+   en l'état, c'est du spectacle.

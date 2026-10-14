@@ -46,6 +46,7 @@ PARAM_COLS = (
     "mu", "load_sens", "fz_nom", "pac_b", "pac_c", "heat_cap", "heat_gain", "cool_base",
     "cool_speed", "roll_heat", "wear_mult", "rear_grip", "rear_b", "wheelbase",
     "c_grip", "c_t_opt", "c_t_width", "c_wear_rate", "c_wear_shape", "c_wet_loss", "c_dry_overheat",
+    "abs",
 )
 PC = {name: i for i, name in enumerate(PARAM_COLS)}
 NP_ = len(PARAM_COLS)
@@ -70,6 +71,7 @@ _POW, _MAXD, _MAXB, _BF, _CDA, _CLA, _AEROF, _ROLL = 8, 9, 10, 11, 12, 13, 14, 1
 _MAXST, _STRATE, _PEDRATE, _MU, _LS, _FZN, _PB, _PCC = 16, 17, 18, 19, 20, 21, 22, 23
 _HCAP, _HGAIN, _CB, _CSP, _RH, _WMULT, _RG, _RB, _WB = 24, 25, 26, 27, 28, 29, 30, 31, 32
 _CGRIP, _CTOPT, _CTW, _CWR, _CWS, _CWL, _CDO = 33, 34, 35, 36, 37, 38, 39
+_ABS = 40
 
 
 @njit(cache=True)
@@ -248,20 +250,33 @@ def step_cars(S, PRM, active, flags, dt, t_now, track_temp,
         brake = brk * p[_MAXB] * moving
         fxf_d = -brake * p[_BF]
         fxr_d = drive - brake * (1.0 - p[_BF])
+        # beyond the tyre limit the wheel locks (or spins): 95 % of the force, little lateral grip.
+        # Anti-lock brakes (0..1, from the brakes part) keep a braking wheel nearer its peak and
+        # steerable; 0 is the base car.
+        q_abs = p[_ABS]
+        lock = 0.95 + 0.05 * q_abs
         if abs(fxf_d) > fmax_f:
-            fxf = math.copysign(0.95 * fmax_f, fxf_d)
+            fxf = math.copysign((lock if fxf_d < 0.0 else 0.95) * fmax_f, fxf_d)
         else:
             fxf = fxf_d
         if abs(fxr_d) > fmax_r:
-            fxr = math.copysign(0.95 * fmax_r, fxr_d)
+            fxr = math.copysign((lock if fxr_d < 0.0 else 0.95) * fmax_r, fxr_d)
         else:
             fxr = fxr_d
         exc_f = abs(fxf_d) - abs(fxf)
         exc_r = abs(fxr_d) - abs(fxr)
         kf = 1.0 - (fxf / fmax_f) ** 2
         kr = 1.0 - (fxr / fmax_r) ** 2
-        fyf *= math.sqrt(kf if kf > 0.0 else 0.0)
-        fyr *= math.sqrt(kr if kr > 0.0 else 0.0)
+        sf = math.sqrt(kf if kf > 0.0 else 0.0)
+        sr = math.sqrt(kr if kr > 0.0 else 0.0)
+        if q_abs > 0.0:
+            keep = 0.3122 * (1.0 + 0.5 * q_abs)  # base locked-wheel share sqrt(1 - 0.95^2), up to +50 %
+            if exc_f > 0.0 and fxf_d < 0.0 and sf < keep:
+                sf = keep
+            if exc_r > 0.0 and fxr_d < 0.0 and sr < keep:
+                sr = keep
+        fyf *= sf
+        fyr *= sr
         cs = math.cos(steer)
         sn = math.sin(steer)
         roll = p[_ROLL] * moving
