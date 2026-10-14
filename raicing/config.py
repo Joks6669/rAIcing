@@ -47,12 +47,12 @@ class CarBase:
     length: float = 5.0
     width: float = 2.0
     power: float = 480_000.0       # W
-    max_drive_force: float = 11_000.0  # N, engine/gearbox limit at low speed
+    max_drive_force: float = 9_000.0  # N, engine/gearbox limit at low speed
     max_brake_force: float = 24_000.0  # N
     brake_bias_front: float = 0.58
     cda: float = 1.30              # drag area (m^2)
     cla: float = 3.40              # downforce area (m^2)
-    aero_balance_front: float = 0.44
+    aero_balance_front: float = 0.43
     rolling_resistance: float = 120.0  # N
     max_steer: float = 0.38        # rad at the wheels
     steer_rate: float = 2.8        # rad/s
@@ -62,11 +62,13 @@ class CarBase:
     fz_nominal: float = 3500.0     # N per tyre where load_sensitivity = 0
     pacejka_b: float = 12.0
     pacejka_c: float = 1.55
-    tyre_heat_capacity: float = 42_000.0  # J/K per axle
-    tyre_heat_gain: float = 0.065         # fraction of sliding power converted to tyre heat
+    rear_grip_ratio: float = 1.08       # wider rear tyres: more grip ...
+    rear_stiffness_ratio: float = 1.15  # ... and more cornering stiffness -> stable understeer
+    tyre_heat_capacity: float = 25_000.0  # J/K per axle
+    tyre_heat_gain: float = 0.35         # fraction of sliding power converted to tyre heat
     tyre_cool_base: float = 55.0          # W/K
-    tyre_cool_speed: float = 6.0          # W/K per m/s
-    tyre_rolling_heat: float = 7.5        # W per (N of load * m/s) * 1e-3 ; carcass flex heating
+    tyre_cool_speed: float = 2.5          # W/K per m/s
+    tyre_rolling_heat: float = 18.0        # W per (N of load * m/s) * 1e-3 ; carcass flex heating
 
 
 @dataclass
