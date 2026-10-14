@@ -199,20 +199,28 @@ replay en canvas : interpolation, caméra, classement en direct, télémétrie, 
 construit une ligue plausible à partir de `web/fixtures/`. Captures dans `web/screenshots/` (le site a
 donc été construit au moins une fois). `web/Dockerfile` (standalone).
 
-## 6. État des tests (exécutés le 14/10/2026 au soir)
+## 6. État des tests (mis à jour le 14/10/2026)
 
-`python -m pytest -q` : **62 réussis, 3 échecs** (≈ 95 s), tous dans `tests/test_lab.py` :
-- `test_vecenv_shapes[traffic]`
-- `test_crash_penalty_and_reset`
-- `test_es_one_generation` (assert 2 == 1)
-Le reste (service, API, CLI, direct, worker, autres tests labo) passe.
+`python -m pytest -q` : **65 réussis, 0 échec** (≈ 35 s). Les 3 échecs précédents de `tests/test_lab.py` :
+- `test_crash_penalty_and_reset` et `test_vecenv_shapes[traffic]` : erreurs des tests (les deux voitures
+  ne touchent jamais le mur à la même décision ; un pilote aléatoire à mi-pédale part trop lentement en
+  `traffic` pour sortir en 6 s). Tests corrigés, code inchangé.
+- `test_es_one_generation` : vrai défaut de `algos/es.py`, qui lançait une génération tronquée avec le
+  reliquat du quota (membres comparés sur des épisodes inégaux). Une génération ne démarre plus que si
+  elle tient entière dans le quota (sauf la première).
+
+Installation en environnement cloud : `download.pytorch.org` est bloqué par le proxy, `pip install`
+récupère donc torch depuis PyPI (version CUDA, lourde mais fonctionnelle).
+
+À examiner : en mode `race`, 75 % des départs sont lancés à un point aléatoire avec `progress = s`, si
+bien que la « course » d'une voiture peut ne durer que quelques décisions (choix de curriculum ou bug ?).
 
 Non vérifié par la session principale : relecture de `service.py` (83 Ko) contre la spec, build web
 actuel, `docs/DIRECTOR_GUIDE.md` (**n'existe pas**).
 
 ## 7. Prochaines étapes, dans l'ordre
 
-1. **Faire passer les 3 tests du labo** (lire chaque test, décider si c'est le test ou le code qui a tort).
+1. ~~Faire passer les 3 tests du labo~~ (fait le 14/10/2026).
 2. **Prouver que l'apprentissage par renforcement améliore un pilote** : partir de `demo-bc`, affiner en
    PPO ou SAC (mode `solo` puis `traffic`), comparer au « pro » sur les circuits de validation. Mesurer le
    débit (décisions/s) par méthode et le documenter dans `docs/LAB.md`.

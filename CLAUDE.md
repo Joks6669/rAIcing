@@ -101,14 +101,13 @@ session principale :
 - `docs/DIRECTOR_GUIDE.md` : peut ne pas exister ou être incomplet.
 
 ### Vérifications faites le 14/10/2026 au soir
-- `pytest -q` : 62 réussis, 3 échecs (tous dans tests/test_lab.py : test_vecenv_shapes[traffic],
-  test_crash_penalty_and_reset, test_es_one_generation).
+- `pytest -q` : 65 réussis, 0 échec (3 tests du labo corrigés, dont un vrai défaut dans `algos/es.py`).
 - `demo_brains/demo-bc` (imitation du « pro ») : 2 tours sans sortie sur 5/5 circuits de labo et 4/5 de
   validation, à 0–2 % du « pro ». Critère d'acceptation atteint pour BC ; RL non encore démontré.
 - `docs/DIRECTOR_GUIDE.md` n'existe pas.
 
 ### Prochaines étapes (dans cet ordre)
-1. `pytest -x -q` ; corriger jusqu'au vert. Relire service.py / app.py contre `docs/LEAGUE.md` et `docs/API.md`.
+1. ~~`pytest -x -q` vert~~ (fait). Relire service.py / app.py contre `docs/LEAGUE.md` et `docs/API.md`.
 2. Laboratoire : vérifier que `run_job` apprend réellement — critère d'acceptation : un pilote qui
    boucle 2 tours sans sortie sur ≥ 3/5 circuits de labo non vus et ≥ 3/5 `validation_track(0..4)`,
    temps comparés au « pro ». Mesurer le débit (décisions/s) par méthode.

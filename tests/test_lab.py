@@ -114,14 +114,16 @@ def test_vecenv_shapes(mode):
     rng = np.random.default_rng(0)
     saw_done = False
     for _ in range(120):
-        obs, rew, done, infos = env.step(rng.uniform(-1, 1, (4, 2)).astype(np.float32))
+        a = rng.uniform(-1, 1, (4, 2)).astype(np.float32)
+        a[:, 1] = 1.0            # full throttle: random steering then hits a wall quickly in every mode
+        obs, rew, done, infos = env.step(a)
         assert obs.shape == (4, OBS_DIM) and rew.shape == (4,) and done.shape == (4,) and len(infos) == 4
         assert np.all(np.isfinite(obs)) and np.all(np.isfinite(rew))
         for i in np.nonzero(done)[0]:
             saw_done = True
             assert infos[i]["terminal_observation"].shape == (OBS_DIM,)
             assert "TimeLimit.truncated" in infos[i] and "episode" in infos[i]
-    assert saw_done          # random drivers crash, and the track rotates at 100 decisions
+    assert saw_done          # random drivers crash (solo/race: the track also rotates at 100 decisions)
 
 
 def test_crash_penalty_and_reset():
@@ -133,7 +135,7 @@ def test_crash_penalty_and_reset():
     for _ in range(400):
         obs, r, term, trunc, infos = sim.step(hard_left)
         total += r
-        if term.all():
+        if term.any():           # the two cars hit the wall at different decisions
             break
     assert term.any()
     i = int(np.nonzero(term)[0][0])

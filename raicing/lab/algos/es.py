@@ -189,7 +189,9 @@ def train_es(cfg: dict[str, Any], regs: Regulations, init_brain: Brain | None, q
     t0 = time.time()
     gen = 0
     best_ret = -np.inf
-    while quota.can(P):
+    # A generation whose episodes are cut short by the quota compares members unfairly, so a new
+    # generation starts only if a full one fits (the first one runs with whatever budget there is).
+    while quota.can(P * ep_len) or (gen == 0 and quota.can(P)):
         if should_stop is not None and should_stop():
             break
         if gen > 0 and gen % rot_gens == 0:
