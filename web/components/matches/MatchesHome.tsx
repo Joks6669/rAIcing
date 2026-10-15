@@ -132,6 +132,7 @@ export default function MatchesHome({ offline }: { offline: boolean }) {
       const res = await fetch("/rencontres-api", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) {
+        if (res.status === 403) setNeedPassword(true);
         const d = data?.detail;
         setError(typeof d === "string" ? d : Array.isArray(d) ? d.map((x: { msg?: string }) => x.msg).join(" ; ") : `Erreur ${res.status}`);
         return;

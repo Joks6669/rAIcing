@@ -225,6 +225,14 @@ modèle stable-baselines3 (PPO/SAC/TD3, avec VecNormalize) ou un `nn.Sequential`
 `scripts/rencontres.py` lance API + site en local (Windows compris). Guide : `docs/RENCONTRES.md`.
 Tests : `tests/test_matches.py`. Le championnat reste en place mais n'est plus la priorité.
 
+Hébergement gratuit (choix de Gabriel) : **Hugging Face Spaces**, SDK Docker, CPU gratuit. Le Space ne
+contient que `deploy/huggingface/Dockerfile` et `README.md` ; le Dockerfile clone le dépôt GitHub, construit
+le site en mode `RAICING_SITE=rencontres` (seule la page Rencontres, le reste redirige) et lance l'API
+(port 8000 interne) puis le site (port 7860). Mot de passe des rencontres : secret `RAICING_MATCH_PASSWORD` ;
+file limitée par `RAICING_MATCH_QUEUE` (5). Guide pas à pas : `docs/DEPLOIEMENT.md`. Image construite et
+testée localement (rencontre de 2 tours en 12 s). Limites : veille après 48 h, rencontres effacées au
+redémarrage (prochaine étape possible : sauvegarde dans un dataset Hugging Face).
+
 ## 6. État des tests (mis à jour le 14/10/2026)
 
 `python -m pytest -q` : **65 réussis, 0 échec** (≈ 35 s). Les 3 échecs précédents de `tests/test_lab.py` :

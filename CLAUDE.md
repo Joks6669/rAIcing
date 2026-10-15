@@ -116,8 +116,9 @@ session principale :
 5. ~~Équilibrage~~ (fait, `docs/BALANCE.md` ; freins = anti-blocage, attrition ~30 % acceptée).
 6. ~~Saison de démonstration~~ → remplacée par la page **Rencontres** (décision de Gabriel : l'entraînement
    se fait ailleurs ; on dépose les modèles entraînés). Voir `docs/RENCONTRES.md`, `raicing/matches.py`.
-7. Déploiement : docker-compose (postgres, api, worker, web), CI GitHub Actions, hébergement
-   (Gabriel a connecté Vercel pour le site ; l'API + worker nécessitent un serveur à part).
+7. Déploiement gratuit des Rencontres sur **Hugging Face Spaces** (choix de Gabriel : rien de payant) :
+   `deploy/huggingface/` + guide `docs/DEPLOIEMENT.md` ; image testée en local. Reste : que Gabriel crée le
+   Space (compte HF). Ensuite : CI GitHub Actions, sauvegarde des rencontres (stockage HF gratuit).
 
 ## Pièges connus
 - Le premier appel au moteur compile les noyaux numba (quelques secondes, mis en cache ensuite).

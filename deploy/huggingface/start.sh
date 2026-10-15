@@ -1,9 +1,18 @@
 #!/usr/bin/env bash
-# Starts the simulation API (internal, port 8000) and the website (public, port 7860).
-# If either process stops, the container exits so that the host restarts it.
+# Starts the simulation API (internal, port 8000), waits until it answers, then the website
+# (public, port 7860). If either process stops, the container exits so that the host restarts it.
 set -u
 mkdir -p "${RAICING_DATA_DIR:-/tmp/raicing-data}" "${NUMBA_CACHE_DIR:-/tmp/numba-cache}"
 python -m raicing.api --host 127.0.0.1 --port 8000 &
+python - <<'PY'
+import time, urllib.request
+for _ in range(120):
+    try:
+        urllib.request.urlopen("http://127.0.0.1:8000/healthz", timeout=2)
+        break
+    except Exception:
+        time.sleep(0.5)
+PY
 cd web
 PORT="${PORT:-7860}" HOSTNAME=0.0.0.0 RAICING_API_URL=http://127.0.0.1:8000 node server.js &
 wait -n

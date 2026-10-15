@@ -3120,6 +3120,7 @@ table.data tbody tr:nth-child(3) .pos {
   color: var(--text-muted);
 }
 .match-form input[type="text"],
+.match-form input[type="password"],
 .match-form input[type="number"],
 .match-form select {
   width: 100%;
