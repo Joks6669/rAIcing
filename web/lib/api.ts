@@ -32,6 +32,11 @@ export function isMock(): boolean {
   return env("RAICING_MOCK") === "1" || !env("RAICING_API_URL");
 }
 
+/** Site réduit à la page Rencontres (hébergement sans championnat) : RAICING_SITE=rencontres. */
+export function matchesOnly(): boolean {
+  return env("RAICING_SITE") === "rencontres";
+}
+
 /** URL de l'API vue par le serveur Next (ex. http://api:8000). Sans le suffixe /api. */
 export function serverApiUrl(): string | undefined {
   return env("RAICING_API_URL")?.replace(/\/+$/, "").replace(/\/api$/, "");

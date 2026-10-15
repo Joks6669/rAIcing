@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import BrandMark from "@/components/BrandMark";
-import { getLeague, getLive, isMock } from "@/lib/api";
+import { getLeague, getLive, isMock, matchesOnly } from "@/lib/api";
 
 // Inter (licence SIL OFL, voir app/fonts/LICENSE-Inter.txt), auto-hébergée : aucun accès réseau au build.
 const inter = localFont({
@@ -62,7 +62,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 AI Racing League
               </span>
             </Link>
-            <Nav seasonHref={seasonHref} live={live.live} />
+            <Nav seasonHref={seasonHref} live={live.live} matchesOnly={matchesOnly()} />
           </div>
         </header>
         <main id="contenu">{children}</main>
@@ -73,7 +73,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 <strong>AI Racing League</strong> — championnat de course entre intelligences artificielles, dans un simulateur
                 physique 2D déterministe. Les IA dirigent, construisent, apprennent et pilotent ; l&apos;humain observe.
               </p>
-              {isMock() ? <span className="demo-badge">Données de démonstration (mode maquette)</span> : null}
+              {isMock() && !matchesOnly() ? <span className="demo-badge">Données de démonstration (mode maquette)</span> : null}
             </div>
             <div className="footer-links">
               <Link href={seasonHref}>Saison en cours</Link>

@@ -12,6 +12,7 @@ import base64
 import binascii
 import gzip
 import hmac
+import os
 import time
 from collections.abc import Iterator
 from datetime import timedelta
@@ -98,6 +99,7 @@ class MatchEntrantBody(BaseModel):
 
 
 class MatchBody(BaseModel):
+    password: str | None = Field(default=None, description="mot de passe des rencontres (RAICING_MATCH_PASSWORD)")
     name: str = ""
     entrants: list[MatchEntrantBody]
     track_seed: int | str | None = None
@@ -195,8 +197,20 @@ def create_app(settings: ApiSettings | None = None) -> FastAPI:
         return Response(gzip.decompress(path.read_bytes()), media_type="application/json", headers=headers)
 
     # ------------------------------------------------------------------ exhibition races
+    match_password = os.environ.get("RAICING_MATCH_PASSWORD") or None
+    max_queued = int(os.environ.get("RAICING_MATCH_QUEUE", "5") or 5)
+
+    @app.get("/api/matches/config")
+    def match_config() -> dict[str, Any]:
+        return {"password_required": match_password is not None, "max_queued": max_queued,
+                "queued": runner.q.qsize()}
+
     @app.post("/api/matches", status_code=201)
     def match_create(body: MatchBody) -> dict[str, Any]:
+        if match_password is not None and not hmac.compare_digest((body.password or "").encode(), match_password.encode()):
+            raise MatchError("mot de passe incorrect", 403)
+        if runner.q.qsize() >= max_queued:
+            raise MatchError(f"{runner.q.qsize()} rencontres attendent déjà : réessayez dans quelques minutes", 429)
         packages: list[bytes | None] = []
         for k, e in enumerate(body.entrants):
             if e.package:
@@ -206,7 +220,7 @@ def create_app(settings: ApiSettings | None = None) -> FastAPI:
                     raise MatchError(f"{e.name or f'participant {k + 1}'} : fichier mal transmis ({exc})") from exc
             else:
                 packages.append(None)
-        meta = matches.create(body.model_dump(exclude={"entrants": {"__all__": {"package"}}}), packages)
+        meta = matches.create(body.model_dump(exclude={"password": True, "entrants": {"__all__": {"package"}}}), packages)
         runner.submit(meta["id"])
         return meta
 

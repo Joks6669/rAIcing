@@ -13,7 +13,7 @@ const LINKS = [
   { href: "/a-propos", label: "À propos", match: (p: string) => p.startsWith("/a-propos") },
 ];
 
-export default function Nav({ seasonHref, live }: { seasonHref: string; live: boolean }) {
+export default function Nav({ seasonHref, live, matchesOnly = false }: { seasonHref: string; live: boolean; matchesOnly?: boolean }) {
   const pathname = usePathname() ?? "/";
   const [open, setOpen] = useState(false);
   useEffect(() => setOpen(false), [pathname]);
@@ -30,7 +30,7 @@ export default function Nav({ seasonHref, live }: { seasonHref: string; live: bo
         <span className="visually-hidden">Menu</span>
       </button>
       <nav id="site-nav" className={open ? "nav open" : "nav"} aria-label="Navigation principale">
-        {LINKS.map((l) => {
+        {LINKS.filter((l) => !matchesOnly || l.href === "/rencontres").map((l) => {
           const href = l.href === "/saison" ? seasonHref : l.href;
           const active = l.match(pathname);
           return (

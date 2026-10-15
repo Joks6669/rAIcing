@@ -60,3 +60,15 @@ def test_match_rejects_bad_packages(tmp_path):
     assert c.post("/api/matches", json={"entrants": [{"reference": "inconnu"}]}).status_code == 400
     assert c.get("/api/matches/abcdefgh").status_code == 404
     assert c.get("/api/matches/../../etc").status_code == 404
+
+
+def test_match_password_and_queue_limit(tmp_path, monkeypatch):
+    monkeypatch.setenv("RAICING_MATCH_PASSWORD", "secret")
+    monkeypatch.setenv("RAICING_MATCH_QUEUE", "0")
+    c = _client(tmp_path)
+    assert c.get("/api/matches/config").json()["password_required"] is True
+    body = {"entrants": [{"reference": "pro"}], "laps": 1}
+    assert c.post("/api/matches", json=body).status_code == 403
+    assert c.post("/api/matches", json={**body, "password": "faux"}).status_code == 403
+    r = c.post("/api/matches", json={**body, "password": "secret"})
+    assert r.status_code == 429 and "attendent" in r.json()["detail"]
